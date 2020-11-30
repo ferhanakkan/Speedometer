@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36894E0A25758DF8002FBC49 /* Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36894E0725758DF8002FBC49 /* Test.plist */; };
+		36894E0B25758DF8002FBC49 /* Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36894E0825758DF8002FBC49 /* Debug.plist */; };
+		36894E0C25758DF8002FBC49 /* Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36894E0925758DF8002FBC49 /* Release.plist */; };
 		36C6C20425756763008D66D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6C20325756763008D66D5 /* AppDelegate.swift */; };
 		36C6C20625756763008D66D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6C20525756763008D66D5 /* SceneDelegate.swift */; };
 		36C6C21025756765008D66D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C6C20E25756765008D66D5 /* LaunchScreen.storyboard */; };
@@ -20,11 +23,13 @@
 
 /* Begin PBXFileReference section */
 		0DEFD013D9DA3F1CF50141E5 /* Pods-Speedometer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.release.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.release.xcconfig"; sourceTree = "<group>"; };
-		36C6C20025756763008D66D5 /* Speedometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speedometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36894E0725758DF8002FBC49 /* Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Test.plist; sourceTree = "<group>"; };
+		36894E0825758DF8002FBC49 /* Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
+		36894E0925758DF8002FBC49 /* Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Release.plist; sourceTree = "<group>"; };
+		36C6C20025756763008D66D5 /* Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C6C20325756763008D66D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36C6C20525756763008D66D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		36C6C20F25756765008D66D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		36C6C21125756765008D66D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36C6C22C25756DC6008D66D5 /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 		36C6C22F25756DD1008D66D5 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		36C6C23225756DDB008D66D5 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
@@ -59,7 +64,7 @@
 		36C6C20125756763008D66D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36C6C20025756763008D66D5 /* Speedometer.app */,
+				36C6C20025756763008D66D5 /* Debug.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,7 +76,6 @@
 				36C6C20325756763008D66D5 /* AppDelegate.swift */,
 				36C6C20525756763008D66D5 /* SceneDelegate.swift */,
 				36C6C20E25756765008D66D5 /* LaunchScreen.storyboard */,
-				36C6C21125756765008D66D5 /* Info.plist */,
 				36C6C2492575708E008D66D5 /* TestVC.swift */,
 				36C6C28A25757B36008D66D5 /* GoogleService-Info.plist */,
 			);
@@ -91,6 +95,9 @@
 		36C6C22825756DAD008D66D5 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				36894E0825758DF8002FBC49 /* Debug.plist */,
+				36894E0925758DF8002FBC49 /* Release.plist */,
+				36894E0725758DF8002FBC49 /* Test.plist */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -141,7 +148,7 @@
 				36C6C1FD25756763008D66D5 /* Frameworks */,
 				36C6C1FE25756763008D66D5 /* Resources */,
 				BA29EE689AD9599142D48D0E /* [CP] Copy Pods Resources */,
-				36C6C28625757A77008D66D5 /* ShellScript */,
+				36894E1125758EE2002FBC49 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -149,7 +156,7 @@
 			);
 			name = Speedometer;
 			productName = Speedometer;
-			productReference = 36C6C20025756763008D66D5 /* Speedometer.app */;
+			productReference = 36C6C20025756763008D66D5 /* Debug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -189,10 +196,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36894E0C25758DF8002FBC49 /* Release.plist in Resources */,
 				36C6C22D25756DC6008D66D5 /* Icon.xcassets in Resources */,
 				36C6C23325756DDB008D66D5 /* Color.xcassets in Resources */,
 				36C6C28B25757B36008D66D5 /* GoogleService-Info.plist in Resources */,
 				36C6C23025756DD1008D66D5 /* Image.xcassets in Resources */,
+				36894E0A25758DF8002FBC49 /* Test.plist in Resources */,
+				36894E0B25758DF8002FBC49 /* Debug.plist in Resources */,
 				36C6C21025756765008D66D5 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,7 +210,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		36C6C28625757A77008D66D5 /* ShellScript */ = {
+		36894E1125758EE2002FBC49 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -217,7 +227,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n\n";
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		BA29EE689AD9599142D48D0E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -410,14 +420,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 43THU6L26P;
-				INFOPLIST_FILE = Speedometer/Info.plist;
+				INFOPLIST_FILE = "Speedometer/Supporting Files/Plist/Debug.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ferhanakkan.Speedometers;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ferhanakkan.Speedometers.debug;
+				PRODUCT_NAME = Debug;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -431,7 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43THU6L26P;
-				INFOPLIST_FILE = Speedometer/Info.plist;
+				INFOPLIST_FILE = "Speedometer/Supporting Files/Plist/Release.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,6 +454,82 @@
 			};
 			name = Release;
 		};
+		36C6C2A225758CF8008D66D5 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Test;
+		};
+		36C6C2A325758CF8008D66D5 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DEFD013D9DA3F1CF50141E5 /* Pods-Speedometer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43THU6L26P;
+				INFOPLIST_FILE = "Speedometer/Supporting Files/Plist/Test.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ferhanakkan.Speedometers.test;
+				PRODUCT_NAME = Test;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Test;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -452,6 +538,7 @@
 			buildConfigurations = (
 				36C6C21225756765008D66D5 /* Debug */,
 				36C6C21325756765008D66D5 /* Release */,
+				36C6C2A225758CF8008D66D5 /* Test */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -461,6 +548,7 @@
 			buildConfigurations = (
 				36C6C21525756765008D66D5 /* Debug */,
 				36C6C21625756765008D66D5 /* Release */,
+				36C6C2A325758CF8008D66D5 /* Test */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
