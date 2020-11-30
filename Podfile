@@ -6,5 +6,5 @@ target 'Speedometer' do
 pod 'Siren'
 pod 'Firebase/Analytics'
 pod 'Firebase/Crashlytics'
-
+pod 'Firebase/Performance'
 end
