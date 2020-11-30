@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "36C6C1FF25756763008D66D5"
-               BuildableName = "a.app"
+               BuildableName = "Release.app"
                BlueprintName = "Speedometer"
                ReferencedContainer = "container:Speedometer.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "36C6C1FF25756763008D66D5"
-            BuildableName = "a.app"
+            BuildableName = "Release.app"
             BlueprintName = "Speedometer"
             ReferencedContainer = "container:Speedometer.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "36C6C1FF25756763008D66D5"
-            BuildableName = "a.app"
+            BuildableName = "Release.app"
             BlueprintName = "Speedometer"
             ReferencedContainer = "container:Speedometer.xcodeproj">
          </BuildableReference>

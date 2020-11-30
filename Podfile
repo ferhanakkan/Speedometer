@@ -7,4 +7,5 @@ pod 'Siren'
 pod 'Firebase/Analytics'
 pod 'Firebase/Crashlytics'
 pod 'Firebase/Performance'
+pod 'QuickApi'
 end
