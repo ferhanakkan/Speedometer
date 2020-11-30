@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>706033543562-bbe6pfgj0i25q9l6jm02qf6d090seko7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.706033543562-bbe6pfgj0i25q9l6jm02qf6d090seko7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBAyVC4XKrQAfUVtbykKr_tpC7qVxrxt-A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>706033543562</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ferhanakkan.Speedometers</string>
+	<key>PROJECT_ID</key>
+	<string>speedometersss</string>
+	<key>STORAGE_BUCKET</key>
+	<string>speedometersss.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:706033543562:ios:342b9fdaecc58045cd0073</string>
+	<key>DATABASE_URL</key>
+	<string>https://speedometersss.firebaseio.com</string>
+</dict>
+</plist>
