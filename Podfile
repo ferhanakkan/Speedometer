@@ -2,7 +2,7 @@
 # platform :ios, '9.0'
 
 target 'Speedometer' do
-
+use_frameworks!
 pod 'Siren'
 pod 'Firebase/Analytics'
 pod 'Firebase/Crashlytics'

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "36C6C1FF25756763008D66D5"
-               BuildableName = "Speedometer.app"
+               BuildableName = "a.app"
                BlueprintName = "Speedometer"
                ReferencedContainer = "container:Speedometer.xcodeproj">
             </BuildableReference>
@@ -31,7 +31,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Test"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "36C6C1FF25756763008D66D5"
-            BuildableName = "Speedometer.app"
+            BuildableName = "a.app"
             BlueprintName = "Speedometer"
             ReferencedContainer = "container:Speedometer.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "36C6C1FF25756763008D66D5"
-            BuildableName = "Speedometer.app"
+            BuildableName = "a.app"
             BlueprintName = "Speedometer"
             ReferencedContainer = "container:Speedometer.xcodeproj">
          </BuildableReference>
