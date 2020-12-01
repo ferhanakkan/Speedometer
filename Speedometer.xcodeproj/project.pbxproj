@@ -49,7 +49,6 @@
 		36C6C22D25756DC6008D66D5 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C6C22C25756DC6008D66D5 /* Icon.xcassets */; };
 		36C6C23025756DD1008D66D5 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C6C22F25756DD1008D66D5 /* Image.xcassets */; };
 		36C6C23325756DDB008D66D5 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C6C23225756DDB008D66D5 /* Color.xcassets */; };
-		36C6C24A2575708E008D66D5 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6C2492575708E008D66D5 /* TestVC.swift */; };
 		36C6C28B25757B36008D66D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36C6C28A25757B36008D66D5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +98,6 @@
 		36C6C22C25756DC6008D66D5 /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 		36C6C22F25756DD1008D66D5 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		36C6C23225756DDB008D66D5 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
-		36C6C2492575708E008D66D5 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		36C6C28A25757B36008D66D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		668CA946E9FA9711F9673E5E /* Pods_Speedometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speedometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EED105F0D37BF218F5609C /* Pods-Speedometer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.debug.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -308,7 +306,6 @@
 				36C6C20525756763008D66D5 /* SceneDelegate.swift */,
 				361022E02576B64D00299E04 /* AppDelegatePushNotification.swift */,
 				36C6C20E25756765008D66D5 /* LaunchScreen.storyboard */,
-				36C6C2492575708E008D66D5 /* TestVC.swift */,
 				36C6C28A25757B36008D66D5 /* GoogleService-Info.plist */,
 			);
 			path = Speedometer;
@@ -526,7 +523,6 @@
 				3610229D2576AE7700299E04 /* UIColor.swift in Sources */,
 				361022A42576AE7700299E04 /* UILabel.swift in Sources */,
 				3610234D2576D24A00299E04 /* SettingsRouter.swift in Sources */,
-				36C6C24A2575708E008D66D5 /* TestVC.swift in Sources */,
 				36C6C20625756763008D66D5 /* SceneDelegate.swift in Sources */,
 				361022A32576AE7700299E04 /* UIFont.swift in Sources */,
 				361022C42576AFBF00299E04 /* Tabbar.swift in Sources */,

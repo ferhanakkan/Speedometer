@@ -15,6 +15,14 @@ final class SettingsViewController: UITableViewController {
         super.viewDidLoad()
         setUI()
     }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        if #available(iOS 13.0, *) {
+            self.navigationController?.navigationBar.tintColor = .textColor
+            self.navigationController?.navigationBar.barTintColor = .secondColor
+        }
+    }
+
 }
 
 //MARK: SetUI
@@ -24,7 +32,9 @@ extension SettingsViewController {
     private func setUI() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
+        self.navigationController?.navigationBar.tintColor = .textColor
         title = "test"
+        
 //        view.backgroundColor = .lightGray
         
     }
@@ -33,6 +43,20 @@ extension SettingsViewController {
 //MARK: TableView Delegates
 
 extension SettingsViewController {
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "test 0"
+        } else {
+            return "test 1"
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(40)
+    }
+    
+
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         2

@@ -15,16 +15,16 @@ class Tabbar {
         let navigationArray = [UINavigationController(rootViewController: SettingsRouter().controller)]
         
         for index in 0 ..< navigationArray.count {
-            navigationArray[index].navigationBar.barTintColor = .darkGray
-            navigationArray[index].navigationBar.backgroundColor = .gray
-            navigationArray[index].navigationBar.tintColor = .orange
+            navigationArray[index].navigationBar.barTintColor = .firstColor
+//            navigationArray[index].navigationBar.backgroundColor = .gray
+            navigationArray[index].navigationBar.tintColor = .textColor
         }
         
         tabController.viewControllers = navigationArray
         
-        tabController.tabBar.backgroundColor = .gray
-        tabController.tabBar.barTintColor = .darkGray
-        tabController.tabBar.tintColor = .orange
+        tabController.tabBar.backgroundColor = .firstColor
+        tabController.tabBar.tintColor = .textColor
+        
         
 //        tabController.tabBar.items?[0].image = UIImage(named: "LaunchScreen")
 //        tabController.tabBar.items![0].selectedImage = UIImage(named: "LaunchScreen")

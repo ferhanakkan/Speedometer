@@ -20,9 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         firebase(application)
         setLanguage()
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = AnimatedSplashViewController()
-        window?.makeKeyAndVisible()
+        if #available(iOS 13.0, *) {} else {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.rootViewController = AnimatedSplashViewController()
+            window?.makeKeyAndVisible()
+        }
+        
+
         return true
     }
 
