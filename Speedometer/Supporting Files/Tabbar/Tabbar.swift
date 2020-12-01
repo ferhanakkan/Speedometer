@@ -12,7 +12,7 @@ class Tabbar {
         
         let tabController = UITabBarController()
         
-        let navigationArray = [UINavigationController(rootViewController: TestVC())]
+        let navigationArray = [UINavigationController(rootViewController: SettingsRouter().controller)]
         
         for index in 0 ..< navigationArray.count {
             navigationArray[index].navigationBar.barTintColor = .darkGray

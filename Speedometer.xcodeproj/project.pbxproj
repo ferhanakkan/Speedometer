@@ -35,6 +35,11 @@
 		361022C42576AFBF00299E04 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361022C22576AFBF00299E04 /* Tabbar.swift */; };
 		361022E12576B64D00299E04 /* AppDelegatePushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361022E02576B64D00299E04 /* AppDelegatePushNotification.swift */; };
 		361023002576B8FA00299E04 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 361022FF2576B8FA00299E04 /* giphy.gif */; };
+		361023492576D23C00299E04 /* SettingsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361023482576D23C00299E04 /* SettingsProtocols.swift */; };
+		3610234D2576D24A00299E04 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610234C2576D24A00299E04 /* SettingsRouter.swift */; };
+		361023502576D25700299E04 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610234F2576D25700299E04 /* SettingsInteractor.swift */; };
+		361023532576D26600299E04 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361023522576D26600299E04 /* SettingsPresenter.swift */; };
+		361023562576D28100299E04 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361023552576D28100299E04 /* SettingsViewController.swift */; };
 		36894E0A25758DF8002FBC49 /* Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36894E0725758DF8002FBC49 /* Test.plist */; };
 		36894E0B25758DF8002FBC49 /* Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36894E0825758DF8002FBC49 /* Debug.plist */; };
 		36894E0C25758DF8002FBC49 /* Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36894E0925758DF8002FBC49 /* Release.plist */; };
@@ -80,6 +85,11 @@
 		361022E02576B64D00299E04 /* AppDelegatePushNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegatePushNotification.swift; sourceTree = "<group>"; };
 		361022FF2576B8FA00299E04 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		3610233D2576BB8800299E04 /* Speedometer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speedometer.entitlements; sourceTree = "<group>"; };
+		361023482576D23C00299E04 /* SettingsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProtocols.swift; sourceTree = "<group>"; };
+		3610234C2576D24A00299E04 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		3610234F2576D25700299E04 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		361023522576D26600299E04 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		361023552576D28100299E04 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		36894E0725758DF8002FBC49 /* Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Test.plist; sourceTree = "<group>"; };
 		36894E0825758DF8002FBC49 /* Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
 		36894E0925758DF8002FBC49 /* Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Release.plist; sourceTree = "<group>"; };
@@ -248,8 +258,21 @@
 		361023442576C67D00299E04 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				361023472576D22600299E04 /* Settings */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		361023472576D22600299E04 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				361023482576D23C00299E04 /* SettingsProtocols.swift */,
+				3610234C2576D24A00299E04 /* SettingsRouter.swift */,
+				3610234F2576D25700299E04 /* SettingsInteractor.swift */,
+				361023522576D26600299E04 /* SettingsPresenter.swift */,
+				361023552576D28100299E04 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		36C6C1F725756763008D66D5 = {
@@ -494,6 +517,7 @@
 			files = (
 				3610229B2576AE7700299E04 /* UIDate.swift in Sources */,
 				36C6C20425756763008D66D5 /* AppDelegate.swift in Sources */,
+				361023562576D28100299E04 /* SettingsViewController.swift in Sources */,
 				361022B82576AF8100299E04 /* AnimatedSplashViewController.swift in Sources */,
 				361022A82576AE7700299E04 /* String.swift in Sources */,
 				361022A22576AE7700299E04 /* UIImageView.swift in Sources */,
@@ -501,11 +525,14 @@
 				3610229C2576AE7700299E04 /* UIStackView.swift in Sources */,
 				3610229D2576AE7700299E04 /* UIColor.swift in Sources */,
 				361022A42576AE7700299E04 /* UILabel.swift in Sources */,
+				3610234D2576D24A00299E04 /* SettingsRouter.swift in Sources */,
 				36C6C24A2575708E008D66D5 /* TestVC.swift in Sources */,
 				36C6C20625756763008D66D5 /* SceneDelegate.swift in Sources */,
 				361022A32576AE7700299E04 /* UIFont.swift in Sources */,
 				361022C42576AFBF00299E04 /* Tabbar.swift in Sources */,
+				361023492576D23C00299E04 /* SettingsProtocols.swift in Sources */,
 				361022E12576B64D00299E04 /* AppDelegatePushNotification.swift in Sources */,
+				361023502576D25700299E04 /* SettingsInteractor.swift in Sources */,
 				361022A12576AE7700299E04 /* UIViewController.swift in Sources */,
 				361022A52576AE7700299E04 /* UIApplication.swift in Sources */,
 				361022A92576AE7700299E04 /* Dictonary.swift in Sources */,
@@ -516,6 +543,7 @@
 				3610229A2576AE7700299E04 /* UIView.swift in Sources */,
 				361022A72576AE7700299E04 /* Encodable.swift in Sources */,
 				3610229F2576AE7700299E04 /* UITextfield.swift in Sources */,
+				361023532576D26600299E04 /* SettingsPresenter.swift in Sources */,
 				3600D06C2576ACB100E81A1B /* Constants.swift in Sources */,
 				361022AD2576AEC300299E04 /* MKGridentEnum.swift in Sources */,
 				361022C32576AFBF00299E04 /* RootSelector.swift in Sources */,
