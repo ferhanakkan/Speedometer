@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import Siren
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,6 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func setLanguage() {
         AppManager.shared.appLaunchLanguage()
+    }
+    
+    private func setSiren() {
+        Siren.shared.wail()
     }
 
 }

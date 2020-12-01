@@ -64,7 +64,6 @@ extension AppManager {
 func messagePresent(title: String, message: String, moreButtonAction: [UIAlertAction]?) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: Constants.AlertMessage.ok, style: .default, handler: { (_) in
-        
     }))
     
     if let actions = moreButtonAction {
