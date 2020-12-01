@@ -8,3 +8,7 @@
 
 "test-Lang" = "tr";
 "tabbar.test" = "test tr";
+
+
+"alertTitle" = "Hata";
+"alertOkButton" = "Tamam";

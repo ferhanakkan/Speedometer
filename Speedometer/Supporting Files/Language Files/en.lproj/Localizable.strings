@@ -9,3 +9,6 @@
 "test-Lang" = "eng";
 "tabbar.test" = "test eng";
 
+
+"alertTitle" = "Error";
+"alertOkButton" = "OK";
