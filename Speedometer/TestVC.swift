@@ -12,7 +12,7 @@ class TestVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view, typically from a nib.
-
+//        let localizedName = "test-Lang".localized()
         let button = UIButton(type: .roundedRect)
         button.frame = CGRect(x: 20, y: 50, width: 100, height: 30)
         button.setTitle("Crash", for: [])

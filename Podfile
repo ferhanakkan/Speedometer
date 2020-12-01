@@ -7,5 +7,11 @@ pod 'Siren'
 pod 'Firebase/Analytics'
 pod 'Firebase/Crashlytics'
 pod 'Firebase/Performance'
+pod 'Firebase/Messaging'
 pod 'QuickApi'
+pod 'RealmSwift'
+pod 'SwiftyGif'
+pod 'NVActivityIndicatorView'
+pod 'SnapKit', '~> 5.0.0'
+
 end
