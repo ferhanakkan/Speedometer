@@ -22,6 +22,11 @@ struct Constants {
         static var title = "alertTitle".localized()
         static var ok = "alertOkButton".localized()
     }
+    
+    struct SettingsViewController {
+        static var donationCell = "SettingsDonationCell"
+        static var imageCell = "SettingsImageCell"
+    }
 }
 
 

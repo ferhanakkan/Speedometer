@@ -12,3 +12,22 @@
 
 "alertTitle" = "Error";
 "alertOkButton" = "OK";
+
+
+// SettingsViewController
+
+"settingsTitle" = "Settings";
+
+"settingsFirstTitle" = "General";
+"settingsPoint" = "Rate App";
+"settingsShare" = "Share App";
+"settingsFeedback" = "Send Feedback";
+
+"settingsSecondTitle" = "WOULD YOU LIKE TO SUPPORT ME ?";
+"settingsMiniBox" = "Small Gift Package";
+"settingsMediumBox" = "Medium Gift Package";
+"settingsBigBox" = "Big Gift Package";
+
+
+
+

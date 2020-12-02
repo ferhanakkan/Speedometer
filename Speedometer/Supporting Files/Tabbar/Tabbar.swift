@@ -16,13 +16,12 @@ class Tabbar {
         
         for index in 0 ..< navigationArray.count {
             navigationArray[index].navigationBar.barTintColor = .firstColor
-//            navigationArray[index].navigationBar.backgroundColor = .gray
             navigationArray[index].navigationBar.tintColor = .textColor
         }
         
         tabController.viewControllers = navigationArray
         
-        tabController.tabBar.backgroundColor = .firstColor
+        tabController.tabBar.barTintColor = .firstColor
         tabController.tabBar.tintColor = .textColor
         
         

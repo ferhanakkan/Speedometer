@@ -12,3 +12,19 @@
 
 "alertTitle" = "Hata";
 "alertOkButton" = "Tamam";
+
+
+// SettingsViewController
+
+"settingsTitle" = "Ayarlar";
+
+"settingsFirstTitle" = "Genel";
+"settingsPoint" = "Uygulamaya Puan Ver";
+"settingsShare" = "Uygulamayı Paylaş";
+"settingsFeedback" = "Geri Bildirim Gönder";
+
+"settingsSecondTitle" = "BENİ DESTEKLEMEK İSTER MİSİNİZ ?";
+"settingsPoint" = "Uygulamaya Puan Ver";
+"settingsMiniBox" = "Küçük Boy Hediye Pakedi";
+"settingsMediumBox" = "Orta Boy Hediye Pakedi";
+"settingsBigBox" = "Büyük Boy Hediye Pakedi";

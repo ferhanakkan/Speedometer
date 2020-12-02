@@ -50,6 +50,10 @@
 		36C6C23025756DD1008D66D5 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C6C22F25756DD1008D66D5 /* Image.xcassets */; };
 		36C6C23325756DDB008D66D5 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C6C23225756DDB008D66D5 /* Color.xcassets */; };
 		36C6C28B25757B36008D66D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36C6C28A25757B36008D66D5 /* GoogleService-Info.plist */; };
+		36DD404125780DC5002A6A04 /* SettingsDonationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD404025780DC5002A6A04 /* SettingsDonationCell.swift */; };
+		36DD404425780DD7002A6A04 /* SettingsImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD404325780DD7002A6A04 /* SettingsImageCell.swift */; };
+		36DD404725780E52002A6A04 /* SettingsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD404625780E52002A6A04 /* SettingsEnum.swift */; };
+		36DD404B25781F63002A6A04 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD404A25781F63002A6A04 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +103,10 @@
 		36C6C22F25756DD1008D66D5 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		36C6C23225756DDB008D66D5 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		36C6C28A25757B36008D66D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		36DD404025780DC5002A6A04 /* SettingsDonationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDonationCell.swift; sourceTree = "<group>"; };
+		36DD404325780DD7002A6A04 /* SettingsImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsImageCell.swift; sourceTree = "<group>"; };
+		36DD404625780E52002A6A04 /* SettingsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEnum.swift; sourceTree = "<group>"; };
+		36DD404A25781F63002A6A04 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		668CA946E9FA9711F9673E5E /* Pods_Speedometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speedometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EED105F0D37BF218F5609C /* Pods-Speedometer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.debug.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.debug.xcconfig"; sourceTree = "<group>"; };
 		E405900AE501ECB8EAE8E6F1 /* Pods-Speedometer.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.test.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.test.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				361022AC2576AEC300299E04 /* MKGridentEnum.swift */,
+				36DD404625780E52002A6A04 /* SettingsEnum.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -264,6 +273,7 @@
 		361023472576D22600299E04 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				36DD403B25780D92002A6A04 /* TableView Cell */,
 				361023482576D23C00299E04 /* SettingsProtocols.swift */,
 				3610234C2576D24A00299E04 /* SettingsRouter.swift */,
 				3610234F2576D25700299E04 /* SettingsInteractor.swift */,
@@ -351,6 +361,16 @@
 				36C6C23225756DDB008D66D5 /* Color.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		36DD403B25780D92002A6A04 /* TableView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				36DD404025780DC5002A6A04 /* SettingsDonationCell.swift */,
+				36DD404325780DD7002A6A04 /* SettingsImageCell.swift */,
+				36DD404A25781F63002A6A04 /* HeaderView.swift */,
+			);
+			path = "TableView Cell";
 			sourceTree = "<group>";
 		};
 		8973944C8E31E5415748A3BA /* Pods */ = {
@@ -515,12 +535,14 @@
 				3610229B2576AE7700299E04 /* UIDate.swift in Sources */,
 				36C6C20425756763008D66D5 /* AppDelegate.swift in Sources */,
 				361023562576D28100299E04 /* SettingsViewController.swift in Sources */,
+				36DD404725780E52002A6A04 /* SettingsEnum.swift in Sources */,
 				361022B82576AF8100299E04 /* AnimatedSplashViewController.swift in Sources */,
 				361022A82576AE7700299E04 /* String.swift in Sources */,
 				361022A22576AE7700299E04 /* UIImageView.swift in Sources */,
 				361022992576AE7700299E04 /* AppManager.swift in Sources */,
 				3610229C2576AE7700299E04 /* UIStackView.swift in Sources */,
 				3610229D2576AE7700299E04 /* UIColor.swift in Sources */,
+				36DD404425780DD7002A6A04 /* SettingsImageCell.swift in Sources */,
 				361022A42576AE7700299E04 /* UILabel.swift in Sources */,
 				3610234D2576D24A00299E04 /* SettingsRouter.swift in Sources */,
 				36C6C20625756763008D66D5 /* SceneDelegate.swift in Sources */,
@@ -529,6 +551,7 @@
 				361023492576D23C00299E04 /* SettingsProtocols.swift in Sources */,
 				361022E12576B64D00299E04 /* AppDelegatePushNotification.swift in Sources */,
 				361023502576D25700299E04 /* SettingsInteractor.swift in Sources */,
+				36DD404B25781F63002A6A04 /* HeaderView.swift in Sources */,
 				361022A12576AE7700299E04 /* UIViewController.swift in Sources */,
 				361022A52576AE7700299E04 /* UIApplication.swift in Sources */,
 				361022A92576AE7700299E04 /* Dictonary.swift in Sources */,
@@ -539,6 +562,7 @@
 				3610229A2576AE7700299E04 /* UIView.swift in Sources */,
 				361022A72576AE7700299E04 /* Encodable.swift in Sources */,
 				3610229F2576AE7700299E04 /* UITextfield.swift in Sources */,
+				36DD404125780DC5002A6A04 /* SettingsDonationCell.swift in Sources */,
 				361023532576D26600299E04 /* SettingsPresenter.swift in Sources */,
 				3600D06C2576ACB100E81A1B /* Constants.swift in Sources */,
 				361022AD2576AEC300299E04 /* MKGridentEnum.swift in Sources */,
