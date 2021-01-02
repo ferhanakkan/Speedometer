@@ -44,8 +44,6 @@ extension SettingsImageCell {
         
         if cellIndex == 0 {
             self.roundCornersEachCorner([.topLeft,.topRight], radius: 5)
-        } else if cellIndex == 4 {
-            self.roundCornersEachCorner([.bottomLeft,.bottomRight], radius: 5)
         } else {
             self.roundCornersEachCorner([.topLeft,.topRight,.bottomLeft,.bottomRight], radius: 0)
         }
@@ -95,6 +93,8 @@ extension SettingsImageCell {
         case .gps:
             titleLabel.text = "settingsGps".localized()
             myImageView.image = #imageLiteral(resourceName: "gps")
+        case .speedUnit:
+            break
         }
         setImageViewColor()
     }

@@ -38,6 +38,9 @@
 		361023502576D25700299E04 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610234F2576D25700299E04 /* SettingsInteractor.swift */; };
 		361023532576D26600299E04 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361023522576D26600299E04 /* SettingsPresenter.swift */; };
 		361023562576D28100299E04 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361023552576D28100299E04 /* SettingsViewController.swift */; };
+		3624D0AB25A0F5C4006F20AE /* SettingsSpeedUnitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D0AA25A0F5C4006F20AE /* SettingsSpeedUnitTableViewCell.swift */; };
+		3624D0AE25A0FA66006F20AE /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D0AD25A0FA66006F20AE /* AppManager.swift */; };
+		3624D0B125A101BF006F20AE /* GPSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D0B025A101BF006F20AE /* GPSService.swift */; };
 		366FCB1725A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1625A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift */; };
 		366FCB1A25A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1925A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift */; };
 		366FCB1D25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1C25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift */; };
@@ -55,7 +58,6 @@
 		36A31ACA25A0903B001F1FE7 /* SendFeedbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A31AC925A0903B001F1FE7 /* SendFeedbackRouter.swift */; };
 		36A31ACD25A0904D001F1FE7 /* SendFeedbackProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A31ACC25A0904D001F1FE7 /* SendFeedbackProtocols.swift */; };
 		36C6C20425756763008D66D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6C20325756763008D66D5 /* AppDelegate.swift */; };
-		36C6C20625756763008D66D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6C20525756763008D66D5 /* SceneDelegate.swift */; };
 		36C6C21025756765008D66D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C6C20E25756765008D66D5 /* LaunchScreen.storyboard */; };
 		36C6C22D25756DC6008D66D5 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C6C22C25756DC6008D66D5 /* Icon.xcassets */; };
 		36C6C23025756DD1008D66D5 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C6C22F25756DD1008D66D5 /* Image.xcassets */; };
@@ -105,6 +107,9 @@
 		3610234F2576D25700299E04 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
 		361023522576D26600299E04 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		361023552576D28100299E04 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3624D0AA25A0F5C4006F20AE /* SettingsSpeedUnitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSpeedUnitTableViewCell.swift; sourceTree = "<group>"; };
+		3624D0AD25A0FA66006F20AE /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		3624D0B025A101BF006F20AE /* GPSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSService.swift; sourceTree = "<group>"; };
 		366FCB1625A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageProtocols.swift; sourceTree = "<group>"; };
 		366FCB1925A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguagesRouter.swift; sourceTree = "<group>"; };
 		366FCB1C25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguagesInteractor.swift; sourceTree = "<group>"; };
@@ -123,7 +128,6 @@
 		36A31ACC25A0904D001F1FE7 /* SendFeedbackProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackProtocols.swift; sourceTree = "<group>"; };
 		36C6C20025756763008D66D5 /* Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C6C20325756763008D66D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36C6C20525756763008D66D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		36C6C22C25756DC6008D66D5 /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 		36C6C22F25756DD1008D66D5 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		36C6C23225756DDB008D66D5 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 			children = (
 				36A31AB625A0813D001F1FE7 /* AlertService.swift */,
 				36A31ABA25A08172001F1FE7 /* LanguageService.swift */,
+				3624D0AD25A0FA66006F20AE /* AppManager.swift */,
+				3624D0B025A101BF006F20AE /* GPSService.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -366,7 +372,6 @@
 				361022842576AE7700299E04 /* Shared */,
 				36C6C22725756DA6008D66D5 /* Supporting Files */,
 				36C6C20325756763008D66D5 /* AppDelegate.swift */,
-				36C6C20525756763008D66D5 /* SceneDelegate.swift */,
 				361022E02576B64D00299E04 /* AppDelegatePushNotification.swift */,
 				36C6C20E25756765008D66D5 /* LaunchScreen.storyboard */,
 				36C6C28A25757B36008D66D5 /* GoogleService-Info.plist */,
@@ -421,6 +426,7 @@
 				36DD404025780DC5002A6A04 /* SettingsDonationCell.swift */,
 				36DD404325780DD7002A6A04 /* SettingsImageCell.swift */,
 				36DD404A25781F63002A6A04 /* HeaderView.swift */,
+				3624D0AA25A0F5C4006F20AE /* SettingsSpeedUnitTableViewCell.swift */,
 			);
 			path = "TableView Cell";
 			sourceTree = "<group>";
@@ -601,7 +607,6 @@
 				3610234D2576D24A00299E04 /* SettingsRouter.swift in Sources */,
 				36A31ABB25A08172001F1FE7 /* LanguageService.swift in Sources */,
 				366FCB1725A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift in Sources */,
-				36C6C20625756763008D66D5 /* SceneDelegate.swift in Sources */,
 				361022A32576AE7700299E04 /* UIFont.swift in Sources */,
 				36A31AB725A0813D001F1FE7 /* AlertService.swift in Sources */,
 				366FCB2025A0CD4A00F5AEF4 /* ChangeLanguagesPresenter.swift in Sources */,
@@ -611,6 +616,7 @@
 				366FCB2325A0CD5700F5AEF4 /* ChangeLanguagesViewController.swift in Sources */,
 				361022E12576B64D00299E04 /* AppDelegatePushNotification.swift in Sources */,
 				361023502576D25700299E04 /* SettingsInteractor.swift in Sources */,
+				3624D0B125A101BF006F20AE /* GPSService.swift in Sources */,
 				36DD404B25781F63002A6A04 /* HeaderView.swift in Sources */,
 				361022A12576AE7700299E04 /* UIViewController.swift in Sources */,
 				361022A52576AE7700299E04 /* UIApplication.swift in Sources */,
@@ -620,7 +626,9 @@
 				361022B22576AF4D00299E04 /* CoreRealm.swift in Sources */,
 				361022A62576AE7700299E04 /* UITextView.swift in Sources */,
 				361022BD2576AF9900299E04 /* LoadingView.swift in Sources */,
+				3624D0AE25A0FA66006F20AE /* AppManager.swift in Sources */,
 				3610229A2576AE7700299E04 /* UIView.swift in Sources */,
+				3624D0AB25A0F5C4006F20AE /* SettingsSpeedUnitTableViewCell.swift in Sources */,
 				361022A72576AE7700299E04 /* Encodable.swift in Sources */,
 				3610229F2576AE7700299E04 /* UITextfield.swift in Sources */,
 				36A31AC725A0902A001F1FE7 /* SendFeedbackInteractor.swift in Sources */,

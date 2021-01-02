@@ -24,4 +24,10 @@ enum SettingsActions {
     case sendFeedback
     case setLanguage
     case gps
+    case speedUnit
+}
+
+enum SettingsSpeedUnit: String {
+    case kmh = "km/h"
+    case mph = "mph"
 }

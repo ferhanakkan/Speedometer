@@ -25,12 +25,18 @@
 "settingsFeedback" = "Send Feedback";
 "settingsLanguage" = "Set Language";
 "settingsGps" = "Set GPS";
+"settingsSpeedUnit" = "Speed Unit";
 
 
 "settingsSecondTitle" = "WOULD YOU LIKE TO SUPPORT ME ?";
 "settingsMiniBox" = "Small Gift Package";
 "settingsMediumBox" = "Medium Gift Package";
 "settingsBigBox" = "Big Gift Package";
+
+"settingsDonationErrorTitle" = "Error";
+"settingsDonationErrorDescription" = "Unexpected Error";
+"settingsDonationSuccessTitle" = "Thank You";
+"settingsDonationSuccessDescription" = "With your help, we will make our application more beautiful.";
 
 
 
@@ -50,3 +56,9 @@
 "changeLanguageTitle" = "Language";
 "changeLanguageTurkish" = "Turkish";
 "changeLanguageEnglish" = "English";
+
+//GPS Service
+
+"gpsErrorTitle" = "Warning";
+"gpsErrorDescription" = "We need your location information to calculate your speed.";
+"gpsErrorToSettings" = "Go To Settings";

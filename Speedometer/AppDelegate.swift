@@ -21,14 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         firebase(application)
         setLanguage()
         setIQKeyboard()
+        setSpeedUnit()
         
-        if #available(iOS 13.0, *) {} else {
-            window = UIWindow(frame: UIScreen.main.bounds)
-            window?.rootViewController = AnimatedSplashViewController()
-            window?.makeKeyAndVisible()
-        }
-        
-
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = AnimatedSplashViewController()
+        window?.makeKeyAndVisible()
         return true
     }
 
@@ -46,11 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(LanguageService.shared.test),
                                                        name: NSLocale.currentLocaleDidChangeNotification, object: nil)
     }
-
-
-    @available(iOS 13.0, *)
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+    private func setSpeedUnit() {
+        AppManager.shared.checkSpeedUnit()
     }
 
     private func setLanguage() {

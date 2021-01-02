@@ -8,10 +8,15 @@
 import Foundation
 import StoreKit
 
-class SettingsPresenter {
+class SettingsPresenter: NSObject {
     var view: SettingsViewProtocol!
     var interactor: SettingsInteractorInputProtocol!
     var router: SettingsRouterProtocol!
+    
+    override init() {
+        super.init()
+        SKPaymentQueue.default().add(self)
+    }
     
     
     private func rateApp() {
@@ -70,11 +75,11 @@ extension SettingsPresenter: SettingsPresenterProtocol {
         } else {
             switch row {
             case 0:
-                print("test")
+                buyPremiumQuotes(productID: "com.ferhanakkan.Cargram.Coffee2")
             case 1:
-                print("test")
+                buyPremiumQuotes(productID: "com.ferhanakkan.Cargram.Coffee2")
             case 2:
-                print("test")
+                buyPremiumQuotes(productID: "com.ferhanakkan.Cargram.Coffee2")
             default:
                 break
             }
@@ -84,6 +89,55 @@ extension SettingsPresenter: SettingsPresenterProtocol {
 
 }
 
-extension SettingsPresenter: SettingsInteractorOutputProtocol {
+//MARK: StoreKit
 
+extension SettingsPresenter: SKPaymentTransactionObserver {
+    
+    func buyPremiumQuotes(productID: String) {
+        if SKPaymentQueue.canMakePayments() {
+            let paymentRequest = SKMutablePayment()
+            paymentRequest.productIdentifier = productID
+            SKPaymentQueue.default().add(paymentRequest)
+            
+        } else {
+            LoadingView.hide()
+            AlertService.messagePresent(title: "settingsDonationErrorTitle".localized(),
+                                        message: "settingsDonationErrorDescription".localized(),
+                                        moreButtonAction: nil)
+        }
+    }
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        LoadingView.hide()
+        for transaction in transactions {
+            switch  transaction.transactionState {
+            case .purchased:
+                SKPaymentQueue.default().finishTransaction(transaction)
+                AlertService.messagePresent(title: "settingsDonationSuccessTitle".localized(),
+                                            message: "settingsDonationSuccessDescription".localized(),
+                                            moreButtonAction: nil)
+            case .failed:
+                if let error = transaction.error {
+                    let errorDescription = error.localizedDescription
+                    AlertService.messagePresent(title: "settingsDonationErrorTitle".localized(),
+                                                message: errorDescription,
+                                                moreButtonAction: nil)
+                }
+                SKPaymentQueue.default().finishTransaction(transaction)
+            case .restored:
+                SKPaymentQueue.default().finishTransaction(transaction)
+            default:
+                break
+            }
+        }
+    }
+    
+    func checkPreviousPurchase(_ sender: UIBarButtonItem) {
+        /////DİD BUY BEFORE Anything check For next versions
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+}
+
+extension SettingsPresenter: SettingsInteractorOutputProtocol {
+    
 }

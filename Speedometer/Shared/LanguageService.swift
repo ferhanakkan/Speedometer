@@ -18,7 +18,7 @@ class LanguageService {
     var bundle = Bundle()
     
     @objc func test() {
-        UserDefaults.standard.setValue("asdasda", forKey: Constants.Language.langKey)
+        setLanguage(language: Locale.current.languageCode!)
     }
     
     func appLaunchLanguage() {

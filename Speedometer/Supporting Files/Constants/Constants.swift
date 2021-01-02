@@ -25,8 +25,10 @@ struct Constants {
     }
     
     struct SettingsViewController {
+        static var speedCell = "SettingsSpeedUnitTableViewCell"
         static var donationCell = "SettingsDonationCell"
         static var imageCell = "SettingsImageCell"
+        static var selectedSpeedUnitKey = "SpeedUnit"
     }
     
     struct ChangeLanguageViewController {

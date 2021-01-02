@@ -25,12 +25,18 @@
 "settingsFeedback" = "Geri Bildirim Gönder";
 "settingsLanguage" = "Dili Seç";
 "settingsGps" = "GPS ayarları";
+"settingsSpeedUnit" = "Hız Birimi";
 
 "settingsSecondTitle" = "BENİ DESTEKLEMEK İSTER MİSİNİZ ?";
 "settingsPoint" = "Uygulamaya Puan Ver";
 "settingsMiniBox" = "Küçük Boy Hediye Pakedi";
 "settingsMediumBox" = "Orta Boy Hediye Pakedi";
 "settingsBigBox" = "Büyük Boy Hediye Pakedi";
+
+"settingsDonationErrorTitle" = "Hata";
+"settingsDonationErrorDescription" = "Beklenmedik Hata";
+"settingsDonationSuccessTitle" = "Teşekkürler";
+"settingsDonationSuccessDescription" = "Yardımlarınız sayesinde uygulamamızı daha ileri taşıyabileceğiz.";
 
 // SendFeedbackViewController
 
@@ -48,3 +54,9 @@
 "changeLanguageTitle" = "Dil";
 "changeLanguageTurkish" = "Türkçe";
 "changeLanguageEnglish" = "İngilizce";
+
+//GPS Service
+
+"gpsErrorTitle" = "Uyarı";
+"gpsErrorButton" = "Hızınızı hesaplayabilmemiz için konum bilginize ihtiyaç duymaktayız.";
+"gpsErrorToSettings" = "Ayarlara Git";

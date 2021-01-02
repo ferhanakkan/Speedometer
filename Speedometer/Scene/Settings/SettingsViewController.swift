@@ -11,11 +11,15 @@ final class SettingsViewController: UIViewController {
     
     var presenter: SettingsPresenterProtocol!
     
+    let test = GPSService()
+    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
         return tableView
     }()
     
@@ -25,6 +29,15 @@ final class SettingsViewController: UIViewController {
         registerTableView()
         setTableViewDelegate()
         tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        test.verifyOrAskForLocationPermission { (bool) in
+            self.test.locationDatas = { location , type in
+                print("ferhan test \(location) \(type)")
+            }
+        }
     }
 }
 
@@ -69,6 +82,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     private func registerTableView() {
         tableView.register(SettingsDonationCell.self, forCellReuseIdentifier: Constants.SettingsViewController.donationCell)
         tableView.register(SettingsImageCell.self, forCellReuseIdentifier: Constants.SettingsViewController.imageCell)
+        tableView.register(SettingsSpeedUnitTableViewCell.self, forCellReuseIdentifier: Constants.SettingsViewController.speedCell)
         tableView.reloadData()
     }
     
@@ -110,7 +124,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 5
+            return 6
         } else {
             return 3
         }
@@ -130,8 +144,11 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.type = .shareApp
             } else if row == 3 {
                 cell.type = .setLanguage
-            } else {
+            } else if row == 4 {
                 cell.type = .gps
+            } else {
+                let speedUnit = tableView.dequeueReusableCell(withIdentifier: Constants.SettingsViewController.speedCell, for: indexPath)
+                return speedUnit
             }
             return cell
         } else {
@@ -157,5 +174,4 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
 //MARK: Protocols
 
 extension SettingsViewController: SettingsViewProtocol {
-    
 }
