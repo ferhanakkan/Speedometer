@@ -67,8 +67,7 @@ extension Date {
     }
     
     
-    func calenderTimeFromNow() -> String
-    {
+    func calenderTimeFromNow() -> String {
         let calendar = Calendar.current
         
         let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: Date(), to: self)

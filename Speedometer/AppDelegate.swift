@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import Siren
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         firebase(application)
         setLanguage()
+        setIQKeyboard()
         
         if #available(iOS 13.0, *) {} else {
             window = UIWindow(frame: UIScreen.main.bounds)
@@ -34,6 +36,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.setValue(0, forKey: Constants.Badge.badgeNumber)
         UIApplication.shared.applicationIconBadgeNumber = 0
     }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        NotificationCenter.default.addObserver(self, selector: #selector(LanguageService.shared.test),
+                                                       name: NSLocale.currentLocaleDidChangeNotification, object: nil)
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        NotificationCenter.default.addObserver(self, selector: #selector(LanguageService.shared.test),
+                                                       name: NSLocale.currentLocaleDidChangeNotification, object: nil)
+    }
 
 
     @available(iOS 13.0, *)
@@ -42,12 +54,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setLanguage() {
-        AppManager.shared.appLaunchLanguage()
+        LanguageService.shared.appLaunchLanguage()
     }
     
     private func setSiren() {
         Siren.shared.wail()
     }
-
+    
+    private func setIQKeyboard() {
+        IQKeyboardManager.shared.enable = true
+    }
 }
 

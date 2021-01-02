@@ -8,10 +8,10 @@
 import UIKit
 
 extension String {
-    func localized() -> String {
-        return NSLocalizedString(self, tableName: nil, bundle: AppManager.shared.bundle, value: "", comment: "")
-    }
     
+    func localized() -> String {
+        return NSLocalizedString(self, tableName: nil, bundle: LanguageService.shared.bundle, value: "", comment: "")
+    }
 }
 
 

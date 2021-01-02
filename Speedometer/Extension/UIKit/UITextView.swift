@@ -24,6 +24,5 @@ extension UITextView {
         let offset = max(1, calculate)
         contentOffset.y = -offset
     }
-    
 }
 

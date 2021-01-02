@@ -24,5 +24,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UserDefaults.standard.setValue(0, forKey: Constants.Badge.badgeNumber)
         UIApplication.shared.applicationIconBadgeNumber = 0
     }
+    
+    func sceneWillEnterForeground(_ scene: UIScene) {
+        NotificationCenter.default.addObserver(self, selector: #selector(LanguageService.shared.test),
+                                                       name: NSLocale.currentLocaleDidChangeNotification, object: nil)
+    }
 }
 

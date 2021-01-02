@@ -23,16 +23,9 @@ final class SettingsDonationCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-    }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if #available(iOS 13.0, *) {
-            priceLabel.tintColor = .firstColor
-            titleLabel.tintColor = .firstColor
-            contentView.backgroundColor = .secondColor
-        }
     }
 }
 
@@ -41,15 +34,15 @@ final class SettingsDonationCell: UITableViewCell {
 extension SettingsDonationCell {
     
     private func setUI() {
-        self.backgroundColor = .clear
-        self.contentView.backgroundColor = .secondColor
+        self.backgroundColor = .secondColor
+        self.contentView.backgroundColor = .clear
         
         if cellIndex == 0 {
-            contentView.roundCornersEachCorner([.topLeft,.topRight], radius: 8)
+            self.roundCornersEachCorner([.topLeft,.topRight], radius: 8)
         } else if cellIndex == 2 {
-            contentView.roundCornersEachCorner([.bottomLeft,.bottomRight], radius: 8)
+            self.roundCornersEachCorner([.bottomLeft,.bottomRight], radius: 8)
         } else {
-            contentView.roundCornersEachCorner([.topLeft,.topRight,.bottomLeft,.bottomRight], radius: 0)
+            self.roundCornersEachCorner([.topLeft,.topRight,.bottomLeft,.bottomRight], radius: 0)
         }
         
         setLabel()
@@ -63,7 +56,8 @@ extension SettingsDonationCell {
         titleLabel.tintColor = .firstColor
         
         titleLabel.snp.makeConstraints { (make) in
-            make.leading.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(5)
+            make.leading.equalToSuperview().offset(10)
             make.bottom.equalToSuperview().inset(5)
         }
     }
@@ -75,7 +69,7 @@ extension SettingsDonationCell {
         priceLabel.snp.makeConstraints { (make) in
             make.height.equalTo(30)
             make.width.equalTo(80)
-            make.trailing.equalToSuperview().inset(5)
+            make.trailing.equalToSuperview().inset(10)
             make.leading.equalTo(titleLabel.snp.trailing)
             make.centerY.equalTo(titleLabel.snp.centerY)
         }
@@ -96,7 +90,6 @@ extension SettingsDonationCell {
             print("unexpected status")
         }
     }
-    
 }
 
 

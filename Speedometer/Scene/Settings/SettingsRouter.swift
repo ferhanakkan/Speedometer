@@ -5,7 +5,7 @@
 //  Created by Ferhan Akkan on 1.12.2020.
 //
 
-import Foundation
+import UIKit
 
 class SettingsRouter {
     
@@ -26,4 +26,20 @@ class SettingsRouter {
     }
 }
 
-extension SettingsRouter: SettingsRouterProtocol {}
+extension SettingsRouter: SettingsRouterProtocol {
+    func showChangeLanguage() {
+        let vc = ChangeLanguagesRouter().controller
+        vc?.hidesBottomBarWhenPushed = true
+        controller.show(vc!, sender: nil)
+    }
+    
+    func presentShareApp(activityVC: UIActivityViewController) {
+        controller.present(activityVC, animated: true, completion: nil)
+    }
+    
+    func showFeedbackController() {
+        let vc = SendFeedbackRouter().controller
+        vc?.hidesBottomBarWhenPushed = true
+        controller.show(vc!, sender: nil)
+    }
+}

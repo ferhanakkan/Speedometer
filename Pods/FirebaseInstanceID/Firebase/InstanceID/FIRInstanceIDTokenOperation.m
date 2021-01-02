@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-#import "Firebase/InstanceID/FIRInstanceIDTokenOperation.h"
+#import "FIRInstanceIDTokenOperation.h"
 
 #import "FirebaseInstallations/Source/Library/Private/FirebaseInstallationsInternal.h"
 
-#import "Firebase/InstanceID/FIRInstanceIDLogger.h"
-#import "Firebase/InstanceID/FIRInstanceIDUtilities.h"
-#import "Firebase/InstanceID/NSError+FIRInstanceID.h"
-#import "Firebase/InstanceID/Private/FIRInstanceIDCheckinPreferences.h"
+#import "FIRInstanceIDCheckinPreferences.h"
+#import "FIRInstanceIDLogger.h"
+#import "FIRInstanceIDUtilities.h"
+#import "NSError+FIRInstanceID.h"
 
 static const NSInteger kFIRInstanceIDPlatformVersionIOS = 2;
 

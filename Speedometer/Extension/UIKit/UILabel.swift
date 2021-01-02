@@ -21,7 +21,6 @@ extension UILabel {
                 attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: selectedRange)
                 attributedString.addAttributes([NSAttributedString.Key.font: underlinedFont as Any, NSAttributedString.Key.foregroundColor: underlinedColor], range: selectedRange)
             }
-            
             attributedText = attributedString
         }
     }

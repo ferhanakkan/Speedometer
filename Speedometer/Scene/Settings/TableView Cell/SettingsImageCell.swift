@@ -30,9 +30,7 @@ final class SettingsImageCell: UITableViewCell {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         if #available(iOS 13.0, *) {
-            myImageView.tintColor = .firstColor
-            titleLabel.tintColor = .firstColor
-            self.backgroundColor = .secondColor
+            setImageViewColor()
         }
     }
 }
@@ -46,7 +44,7 @@ extension SettingsImageCell {
         
         if cellIndex == 0 {
             self.roundCornersEachCorner([.topLeft,.topRight], radius: 5)
-        } else if cellIndex == 2 {
+        } else if cellIndex == 4 {
             self.roundCornersEachCorner([.bottomLeft,.bottomRight], radius: 5)
         } else {
             self.roundCornersEachCorner([.topLeft,.topRight,.bottomLeft,.bottomRight], radius: 0)
@@ -57,14 +55,14 @@ extension SettingsImageCell {
         setDatas()
     }
     
-    
     private func setLabel() {
         contentView.addSubview(titleLabel)
         titleLabel.font = .systemFont(ofSize: 16)
         titleLabel.tintColor = .firstColor
         
         titleLabel.snp.makeConstraints { (make) in
-            make.leading.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(5)
+            make.leading.equalToSuperview().offset(10)
             make.bottom.equalToSuperview().inset(5)
         }
     }
@@ -74,13 +72,11 @@ extension SettingsImageCell {
         myImageView.snp.makeConstraints { (make) in
             make.height.equalTo(30)
             make.width.equalTo(30)
-            make.trailing.equalToSuperview().inset(5)
+            make.trailing.equalToSuperview().inset(10)
             make.leading.equalTo(titleLabel.snp.trailing)
             make.centerY.equalTo(titleLabel.snp.centerY)
         }
     }
-    
-    
     
     private func setDatas() {
         switch type {
@@ -93,11 +89,30 @@ extension SettingsImageCell {
         case .shareApp:
             titleLabel.text = "settingsShare".localized()
             myImageView.image = #imageLiteral(resourceName: "share")
+        case .setLanguage:
+            titleLabel.text = "settingsLanguage".localized()
+            myImageView.image = #imageLiteral(resourceName: "language")
+        case .gps:
+            titleLabel.text = "settingsGps".localized()
+            myImageView.image = #imageLiteral(resourceName: "gps")
         }
-        myImageView.tintColor = .firstColor
-
+        setImageViewColor()
     }
     
+    private func setImageViewColor() {
+        if #available(iOS 12.0, *) {
+            switch traitCollection.userInterfaceStyle {
+            case .light, .unspecified:
+                myImageView.tintColor = .black
+            case .dark:
+                myImageView.tintColor = .white
+            @unknown default:
+                fatalError()
+            }
+        } else {
+            myImageView.tintColor = .black
+        }
+    }
 }
 
 

@@ -21,7 +21,11 @@
 "settingsFirstTitle" = "General";
 "settingsPoint" = "Rate App";
 "settingsShare" = "Share App";
+"settingsShareDescription" = "Change Description";
 "settingsFeedback" = "Send Feedback";
+"settingsLanguage" = "Set Language";
+"settingsGps" = "Set GPS";
+
 
 "settingsSecondTitle" = "WOULD YOU LIKE TO SUPPORT ME ?";
 "settingsMiniBox" = "Small Gift Package";
@@ -30,4 +34,19 @@
 
 
 
+// SendFeedbackViewController
 
+"sendFeedbackTitle" = "Feedback";
+"sendFeedbackLabel" = "Thanks to your feedback, we will be able to offer you a better service.";
+"sendFeedbackSendButton" = "Send";
+"sendFeedbackTextViewPlaceHolder" = "You can enter your feedback :)";
+"sendFeedbackAlertTitle" = "Unexpected situation";
+"sendFeedbackAlertTitleSuccess" = "Thank You";
+"sendFeedbackAlertTitleSuccessDescription" = "Thanks for your help";
+"sendFeedbackAlertButtonTitle" = "OK";
+
+// ChangeLanguageViewController
+
+"changeLanguageTitle" = "Language";
+"changeLanguageTurkish" = "Turkish";
+"changeLanguageEnglish" = "English";

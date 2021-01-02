@@ -8,10 +8,13 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Crashlytics'
 pod 'Firebase/Performance'
 pod 'Firebase/Messaging'
+pod 'Firebase/Firestore'
+pod 'FirebaseFirestoreSwift'
 pod 'QuickApi'
 pod 'RealmSwift'
 pod 'SwiftyGif'
 pod 'NVActivityIndicatorView'
 pod 'SnapKit', '~> 5.0.0'
+pod 'IQKeyboardManagerSwift'
 
 end

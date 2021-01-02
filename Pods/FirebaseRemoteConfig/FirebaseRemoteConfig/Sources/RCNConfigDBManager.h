@@ -73,9 +73,6 @@ typedef void (^RCNDBLoadCompletion)(BOOL success,
 /// Load experiment from experiment table.
 /// @param handler    The callback when reading from DB is complete.
 - (void)loadExperimentWithCompletionHandler:(RCNDBCompletion)handler;
-/// Load Personalization from table.
-/// @param handler    The callback when reading from DB is complete.
-- (void)loadPersonalizationWithCompletionHandler:(RCNDBLoadCompletion)handler;
 
 /// Insert a record in metadata table.
 /// @param columnNameToValue The column name and its value to be inserted in metadata table.
@@ -103,10 +100,6 @@ typedef void (^RCNDBLoadCompletion)(BOOL success,
 - (void)updateMetadataWithOption:(RCNUpdateOption)option
                           values:(NSArray *)values
                completionHandler:(RCNDBCompletion)handler;
-
-/// Insert or update the data in Personalization config.
-- (BOOL)insertOrUpdatePersonalizationConfig:(NSDictionary *)metadata fromSource:(RCNDBSource)source;
-
 /// Clear the record of given namespace and package name
 /// before updating the table.
 - (void)deleteRecordFromMainTableWithNamespace:(NSString *)namespace_p

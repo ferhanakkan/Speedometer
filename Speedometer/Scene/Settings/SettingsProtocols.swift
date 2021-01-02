@@ -5,15 +5,20 @@
 //  Created by Ferhan Akkan on 1.12.2020.
 //
 
-import Foundation
+import UIKit
 
 //MARK: Router
-protocol SettingsRouterProtocol: class { }
+protocol SettingsRouterProtocol: class {
+    func presentShareApp(activityVC: UIActivityViewController)
+    func showFeedbackController()
+    func showChangeLanguage()
+}
 
 //MARK: Presenter
 
 protocol SettingsPresenterProtocol: class {
     var interactor: SettingsInteractorInputProtocol! { get set }
+    func didSelectFromTableView(indexPath: IndexPath)
 }
 
 //MARK: Interactor

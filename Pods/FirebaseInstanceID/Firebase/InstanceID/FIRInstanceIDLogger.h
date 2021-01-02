@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "Firebase/InstanceID/FIRIMessageCode.h"
+#import "FIRIMessageCode.h"
 
 // The convenience macros are only defined if they haven't already been defined.
 #ifndef FIRInstanceIDLoggerInfo

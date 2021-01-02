@@ -12,12 +12,12 @@ final class SettingsViewController: UIViewController {
     var presenter: SettingsPresenterProtocol!
     
     private let tableView: UITableView = {
-         let tableView = UITableView()
-         tableView.tableFooterView = UIView(frame: .zero)
-         tableView.backgroundColor = .clear
+        let tableView = UITableView()
+        tableView.tableFooterView = UIView(frame: .zero)
+        tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
-         return tableView
-     }()
+        return tableView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,17 +26,6 @@ final class SettingsViewController: UIViewController {
         setTableViewDelegate()
         tableView.reloadData()
     }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if #available(iOS 13.0, *) {
-            self.navigationController?.navigationBar.tintColor = .textColor
-            self.navigationController?.navigationBar.barTintColor = .firstColor
-            self.tabBarController?.tabBar.tintColor = .textColor
-            self.tabBarController?.tabBar.barTintColor = .firstColor
-            view.backgroundColor = .firstColor
-        }
-    }
-    
 }
 
 //MARK: SetUI
@@ -84,11 +73,25 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat(30)
+        return CGFloat(50)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(50)
+    }
+    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        " "
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        CGFloat(30)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView()
+        footerView.backgroundColor = .clear
+        return footerView
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -101,15 +104,13 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         return view
     }
     
-    
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 3
+            return 5
         } else {
             return 3
         }
@@ -125,8 +126,12 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.type = .givePoint
             } else if row == 1 {
                 cell.type = .sendFeedback
-            } else {
+            } else if row == 2 {
                 cell.type = .shareApp
+            } else if row == 3 {
+                cell.type = .setLanguage
+            } else {
+                cell.type = .gps
             }
             return cell
         } else {
@@ -144,6 +149,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectFromTableView(indexPath: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

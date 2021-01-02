@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#import "Firebase/InstanceID/FIRInstanceIDTokenOperation.h"
+#import "FIRInstanceIDTokenOperation.h"
 
-#import "Firebase/InstanceID/FIRInstanceIDUtilities.h"
+#import "FIRInstanceIDUtilities.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

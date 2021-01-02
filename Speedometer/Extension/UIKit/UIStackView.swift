@@ -15,9 +15,7 @@ extension UIStackView {
             self.removeArrangedSubview(next)
             return sum + [next]
         }
-        
         NSLayoutConstraint.deactivate(removedSubviews.flatMap({ $0.constraints }))
-        
         removedSubviews.forEach({ $0.removeFromSuperview() })
     }
     

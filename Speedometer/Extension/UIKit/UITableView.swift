@@ -9,7 +9,6 @@ import UIKit
 
 extension UITableView {
     func scrollToBottom(){
-
         DispatchQueue.main.async {
             if (self.numberOfRows(inSection:  self.numberOfSections-1) - 1) > 0 {
                 let indexPath = IndexPath(
@@ -17,7 +16,6 @@ extension UITableView {
                     section: self.numberOfSections-1)
                 self.scrollToRow(at: indexPath, at: .bottom, animated: true)
             }
-
         }
     }
 }

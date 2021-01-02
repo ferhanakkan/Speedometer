@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#import "Firebase/InstanceID/FIRInstanceIDKeychain.h"
+#import "FIRInstanceIDKeychain.h"
 
-#import "Firebase/InstanceID/FIRInstanceIDLogger.h"
+#import "FIRInstanceIDLogger.h"
 
 NSString *const kFIRInstanceIDKeychainErrorDomain = @"com.google.iid";
 

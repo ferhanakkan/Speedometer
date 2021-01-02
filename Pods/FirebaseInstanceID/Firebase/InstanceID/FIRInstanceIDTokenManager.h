@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "Firebase/InstanceID/Public/FIRInstanceID.h"
+#import "FIRInstanceID.h"
 
 @class FIRInstanceIDAuthService;
 @class FIRInstanceIDCheckinPreferences;

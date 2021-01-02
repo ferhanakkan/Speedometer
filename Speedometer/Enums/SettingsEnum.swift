@@ -22,4 +22,6 @@ enum SettingsActions {
     case givePoint
     case shareApp
     case sendFeedback
+    case setLanguage
+    case gps
 }

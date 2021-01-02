@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		128E6E372199DA96422F9AE8 /* Pods_Speedometer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668CA946E9FA9711F9673E5E /* Pods_Speedometer.framework */; };
 		3600D04A2576AB2F00E81A1B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3600D04C2576AB2F00E81A1B /* Localizable.strings */; };
 		3600D06C2576ACB100E81A1B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3600D06B2576ACB100E81A1B /* Constants.swift */; };
-		361022992576AE7700299E04 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361022852576AE7700299E04 /* AppManager.swift */; };
 		3610229A2576AE7700299E04 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361022882576AE7700299E04 /* UIView.swift */; };
 		3610229B2576AE7700299E04 /* UIDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361022892576AE7700299E04 /* UIDate.swift */; };
 		3610229C2576AE7700299E04 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610228A2576AE7700299E04 /* UIStackView.swift */; };
@@ -40,9 +38,22 @@
 		361023502576D25700299E04 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610234F2576D25700299E04 /* SettingsInteractor.swift */; };
 		361023532576D26600299E04 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361023522576D26600299E04 /* SettingsPresenter.swift */; };
 		361023562576D28100299E04 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361023552576D28100299E04 /* SettingsViewController.swift */; };
+		366FCB1725A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1625A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift */; };
+		366FCB1A25A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1925A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift */; };
+		366FCB1D25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1C25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift */; };
+		366FCB2025A0CD4A00F5AEF4 /* ChangeLanguagesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1F25A0CD4A00F5AEF4 /* ChangeLanguagesPresenter.swift */; };
+		366FCB2325A0CD5700F5AEF4 /* ChangeLanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB2225A0CD5700F5AEF4 /* ChangeLanguagesViewController.swift */; };
+		366FCB2725A0CF6400F5AEF4 /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB2625A0CF6400F5AEF4 /* LanguageTableViewCell.swift */; };
 		36894E0A25758DF8002FBC49 /* Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36894E0725758DF8002FBC49 /* Test.plist */; };
 		36894E0B25758DF8002FBC49 /* Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36894E0825758DF8002FBC49 /* Debug.plist */; };
 		36894E0C25758DF8002FBC49 /* Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36894E0925758DF8002FBC49 /* Release.plist */; };
+		36A31AB725A0813D001F1FE7 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A31AB625A0813D001F1FE7 /* AlertService.swift */; };
+		36A31ABB25A08172001F1FE7 /* LanguageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A31ABA25A08172001F1FE7 /* LanguageService.swift */; };
+		36A31AC125A0900B001F1FE7 /* SendFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A31AC025A0900B001F1FE7 /* SendFeedbackViewController.swift */; };
+		36A31AC425A09019001F1FE7 /* SendFeedbackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A31AC325A09019001F1FE7 /* SendFeedbackPresenter.swift */; };
+		36A31AC725A0902A001F1FE7 /* SendFeedbackInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A31AC625A09029001F1FE7 /* SendFeedbackInteractor.swift */; };
+		36A31ACA25A0903B001F1FE7 /* SendFeedbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A31AC925A0903B001F1FE7 /* SendFeedbackRouter.swift */; };
+		36A31ACD25A0904D001F1FE7 /* SendFeedbackProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A31ACC25A0904D001F1FE7 /* SendFeedbackProtocols.swift */; };
 		36C6C20425756763008D66D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6C20325756763008D66D5 /* AppDelegate.swift */; };
 		36C6C20625756763008D66D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6C20525756763008D66D5 /* SceneDelegate.swift */; };
 		36C6C21025756765008D66D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C6C20E25756765008D66D5 /* LaunchScreen.storyboard */; };
@@ -54,15 +65,16 @@
 		36DD404425780DD7002A6A04 /* SettingsImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD404325780DD7002A6A04 /* SettingsImageCell.swift */; };
 		36DD404725780E52002A6A04 /* SettingsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD404625780E52002A6A04 /* SettingsEnum.swift */; };
 		36DD404B25781F63002A6A04 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD404A25781F63002A6A04 /* HeaderView.swift */; };
+		55C2746EE462858C1CF271F1 /* Pods_Speedometer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBF8F2609D32889CDC4F223 /* Pods_Speedometer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AAA45830111804E8E319671 /* Pods-Speedometer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.debug.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.debug.xcconfig"; sourceTree = "<group>"; };
 		3600D0442576AA5600E81A1B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3600D0452576AA5E00E81A1B /* tr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = tr; path = tr.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3600D04B2576AB2F00E81A1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3600D04E2576AB3300E81A1B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3600D06B2576ACB100E81A1B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		361022852576AE7700299E04 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		361022882576AE7700299E04 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		361022892576AE7700299E04 /* UIDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDate.swift; sourceTree = "<group>"; };
 		3610228A2576AE7700299E04 /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
@@ -93,9 +105,22 @@
 		3610234F2576D25700299E04 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
 		361023522576D26600299E04 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		361023552576D28100299E04 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		366FCB1625A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageProtocols.swift; sourceTree = "<group>"; };
+		366FCB1925A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguagesRouter.swift; sourceTree = "<group>"; };
+		366FCB1C25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguagesInteractor.swift; sourceTree = "<group>"; };
+		366FCB1F25A0CD4A00F5AEF4 /* ChangeLanguagesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguagesPresenter.swift; sourceTree = "<group>"; };
+		366FCB2225A0CD5700F5AEF4 /* ChangeLanguagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguagesViewController.swift; sourceTree = "<group>"; };
+		366FCB2625A0CF6400F5AEF4 /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
 		36894E0725758DF8002FBC49 /* Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Test.plist; sourceTree = "<group>"; };
 		36894E0825758DF8002FBC49 /* Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
 		36894E0925758DF8002FBC49 /* Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Release.plist; sourceTree = "<group>"; };
+		36A31AB625A0813D001F1FE7 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		36A31ABA25A08172001F1FE7 /* LanguageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageService.swift; sourceTree = "<group>"; };
+		36A31AC025A0900B001F1FE7 /* SendFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackViewController.swift; sourceTree = "<group>"; };
+		36A31AC325A09019001F1FE7 /* SendFeedbackPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackPresenter.swift; sourceTree = "<group>"; };
+		36A31AC625A09029001F1FE7 /* SendFeedbackInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackInteractor.swift; sourceTree = "<group>"; };
+		36A31AC925A0903B001F1FE7 /* SendFeedbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackRouter.swift; sourceTree = "<group>"; };
+		36A31ACC25A0904D001F1FE7 /* SendFeedbackProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackProtocols.swift; sourceTree = "<group>"; };
 		36C6C20025756763008D66D5 /* Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C6C20325756763008D66D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36C6C20525756763008D66D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,10 +132,9 @@
 		36DD404325780DD7002A6A04 /* SettingsImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsImageCell.swift; sourceTree = "<group>"; };
 		36DD404625780E52002A6A04 /* SettingsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEnum.swift; sourceTree = "<group>"; };
 		36DD404A25781F63002A6A04 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		668CA946E9FA9711F9673E5E /* Pods_Speedometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speedometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		86EED105F0D37BF218F5609C /* Pods-Speedometer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.debug.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.debug.xcconfig"; sourceTree = "<group>"; };
-		E405900AE501ECB8EAE8E6F1 /* Pods-Speedometer.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.test.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.test.xcconfig"; sourceTree = "<group>"; };
-		FE02E3D6AC3CDBA28042F2D4 /* Pods-Speedometer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.release.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.release.xcconfig"; sourceTree = "<group>"; };
+		51868A0CFED05A795EFE8FC4 /* Pods-Speedometer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.release.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.release.xcconfig"; sourceTree = "<group>"; };
+		BDBF8F2609D32889CDC4F223 /* Pods_Speedometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speedometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F14A026D42B758BCBC6E9452 /* Pods-Speedometer.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.test.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.test.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				128E6E372199DA96422F9AE8 /* Pods_Speedometer.framework in Frameworks */,
+				55C2746EE462858C1CF271F1 /* Pods_Speedometer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +168,8 @@
 		361022842576AE7700299E04 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				361022852576AE7700299E04 /* AppManager.swift */,
+				36A31AB625A0813D001F1FE7 /* AlertService.swift */,
+				36A31ABA25A08172001F1FE7 /* LanguageService.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -255,13 +280,6 @@
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
-		361023412576C52B00299E04 /* Push Notifications */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Push Notifications";
-			sourceTree = "<group>";
-		};
 		361023442576C67D00299E04 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +291,8 @@
 		361023472576D22600299E04 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				366FCB1525A0CCF800F5AEF4 /* ChangeLanguage */,
+				36A31ABF25A08FDD001F1FE7 /* SendFeedback */,
 				36DD403B25780D92002A6A04 /* TableView Cell */,
 				361023482576D23C00299E04 /* SettingsProtocols.swift */,
 				3610234C2576D24A00299E04 /* SettingsRouter.swift */,
@@ -283,13 +303,46 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		366FCB1525A0CCF800F5AEF4 /* ChangeLanguage */ = {
+			isa = PBXGroup;
+			children = (
+				366FCB2525A0CF5200F5AEF4 /* TableView Cell */,
+				366FCB1625A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift */,
+				366FCB1925A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift */,
+				366FCB1C25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift */,
+				366FCB1F25A0CD4A00F5AEF4 /* ChangeLanguagesPresenter.swift */,
+				366FCB2225A0CD5700F5AEF4 /* ChangeLanguagesViewController.swift */,
+			);
+			path = ChangeLanguage;
+			sourceTree = "<group>";
+		};
+		366FCB2525A0CF5200F5AEF4 /* TableView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				366FCB2625A0CF6400F5AEF4 /* LanguageTableViewCell.swift */,
+			);
+			path = "TableView Cell";
+			sourceTree = "<group>";
+		};
+		36A31ABF25A08FDD001F1FE7 /* SendFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				36A31AC025A0900B001F1FE7 /* SendFeedbackViewController.swift */,
+				36A31AC325A09019001F1FE7 /* SendFeedbackPresenter.swift */,
+				36A31AC625A09029001F1FE7 /* SendFeedbackInteractor.swift */,
+				36A31AC925A0903B001F1FE7 /* SendFeedbackRouter.swift */,
+				36A31ACC25A0904D001F1FE7 /* SendFeedbackProtocols.swift */,
+			);
+			path = SendFeedback;
+			sourceTree = "<group>";
+		};
 		36C6C1F725756763008D66D5 = {
 			isa = PBXGroup;
 			children = (
 				36C6C20225756763008D66D5 /* Speedometer */,
 				36C6C20125756763008D66D5 /* Products */,
 				8973944C8E31E5415748A3BA /* Pods */,
-				ED8937F82E97D6C9F8800E1A /* Frameworks */,
+				90F8654927BF431E34827D19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -348,7 +401,6 @@
 		36C6C22925756DB3008D66D5 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				361023412576C52B00299E04 /* Push Notifications */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -376,17 +428,17 @@
 		8973944C8E31E5415748A3BA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				86EED105F0D37BF218F5609C /* Pods-Speedometer.debug.xcconfig */,
-				FE02E3D6AC3CDBA28042F2D4 /* Pods-Speedometer.release.xcconfig */,
-				E405900AE501ECB8EAE8E6F1 /* Pods-Speedometer.test.xcconfig */,
+				1AAA45830111804E8E319671 /* Pods-Speedometer.debug.xcconfig */,
+				51868A0CFED05A795EFE8FC4 /* Pods-Speedometer.release.xcconfig */,
+				F14A026D42B758BCBC6E9452 /* Pods-Speedometer.test.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		ED8937F82E97D6C9F8800E1A /* Frameworks */ = {
+		90F8654927BF431E34827D19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				668CA946E9FA9711F9673E5E /* Pods_Speedometer.framework */,
+				BDBF8F2609D32889CDC4F223 /* Pods_Speedometer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -398,12 +450,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36C6C21425756765008D66D5 /* Build configuration list for PBXNativeTarget "Speedometer" */;
 			buildPhases = (
-				2922B9A5C18314E5E896341C /* [CP] Check Pods Manifest.lock */,
+				F04FD837AD975D696968BEB6 /* [CP] Check Pods Manifest.lock */,
 				36C6C1FC25756763008D66D5 /* Sources */,
 				36C6C1FD25756763008D66D5 /* Frameworks */,
 				36C6C1FE25756763008D66D5 /* Resources */,
 				36894E1125758EE2002FBC49 /* ShellScript */,
-				7AA1405BF048A67C856119D9 /* [CP] Embed Pods Frameworks */,
+				8E241A4235562796DE8851E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -467,7 +519,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2922B9A5C18314E5E896341C /* [CP] Check Pods Manifest.lock */ = {
+		36894E1125758EE2002FBC49 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		8E241A4235562796DE8851E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Speedometer/Pods-Speedometer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Speedometer/Pods-Speedometer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Speedometer/Pods-Speedometer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F04FD837AD975D696968BEB6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -489,42 +577,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		36894E1125758EE2002FBC49 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
-				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
-		};
-		7AA1405BF048A67C856119D9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Speedometer/Pods-Speedometer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Speedometer/Pods-Speedometer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Speedometer/Pods-Speedometer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -533,28 +585,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				3610229B2576AE7700299E04 /* UIDate.swift in Sources */,
+				36A31ACA25A0903B001F1FE7 /* SendFeedbackRouter.swift in Sources */,
+				366FCB1D25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift in Sources */,
 				36C6C20425756763008D66D5 /* AppDelegate.swift in Sources */,
+				36A31AC425A09019001F1FE7 /* SendFeedbackPresenter.swift in Sources */,
 				361023562576D28100299E04 /* SettingsViewController.swift in Sources */,
 				36DD404725780E52002A6A04 /* SettingsEnum.swift in Sources */,
 				361022B82576AF8100299E04 /* AnimatedSplashViewController.swift in Sources */,
 				361022A82576AE7700299E04 /* String.swift in Sources */,
 				361022A22576AE7700299E04 /* UIImageView.swift in Sources */,
-				361022992576AE7700299E04 /* AppManager.swift in Sources */,
 				3610229C2576AE7700299E04 /* UIStackView.swift in Sources */,
 				3610229D2576AE7700299E04 /* UIColor.swift in Sources */,
 				36DD404425780DD7002A6A04 /* SettingsImageCell.swift in Sources */,
 				361022A42576AE7700299E04 /* UILabel.swift in Sources */,
 				3610234D2576D24A00299E04 /* SettingsRouter.swift in Sources */,
+				36A31ABB25A08172001F1FE7 /* LanguageService.swift in Sources */,
+				366FCB1725A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift in Sources */,
 				36C6C20625756763008D66D5 /* SceneDelegate.swift in Sources */,
 				361022A32576AE7700299E04 /* UIFont.swift in Sources */,
+				36A31AB725A0813D001F1FE7 /* AlertService.swift in Sources */,
+				366FCB2025A0CD4A00F5AEF4 /* ChangeLanguagesPresenter.swift in Sources */,
 				361022C42576AFBF00299E04 /* Tabbar.swift in Sources */,
 				361023492576D23C00299E04 /* SettingsProtocols.swift in Sources */,
+				36A31AC125A0900B001F1FE7 /* SendFeedbackViewController.swift in Sources */,
+				366FCB2325A0CD5700F5AEF4 /* ChangeLanguagesViewController.swift in Sources */,
 				361022E12576B64D00299E04 /* AppDelegatePushNotification.swift in Sources */,
 				361023502576D25700299E04 /* SettingsInteractor.swift in Sources */,
 				36DD404B25781F63002A6A04 /* HeaderView.swift in Sources */,
 				361022A12576AE7700299E04 /* UIViewController.swift in Sources */,
 				361022A52576AE7700299E04 /* UIApplication.swift in Sources */,
 				361022A92576AE7700299E04 /* Dictonary.swift in Sources */,
+				366FCB1A25A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift in Sources */,
 				3610229E2576AE7700299E04 /* UITableView.swift in Sources */,
 				361022B22576AF4D00299E04 /* CoreRealm.swift in Sources */,
 				361022A62576AE7700299E04 /* UITextView.swift in Sources */,
@@ -562,11 +623,14 @@
 				3610229A2576AE7700299E04 /* UIView.swift in Sources */,
 				361022A72576AE7700299E04 /* Encodable.swift in Sources */,
 				3610229F2576AE7700299E04 /* UITextfield.swift in Sources */,
+				36A31AC725A0902A001F1FE7 /* SendFeedbackInteractor.swift in Sources */,
 				36DD404125780DC5002A6A04 /* SettingsDonationCell.swift in Sources */,
 				361023532576D26600299E04 /* SettingsPresenter.swift in Sources */,
 				3600D06C2576ACB100E81A1B /* Constants.swift in Sources */,
 				361022AD2576AEC300299E04 /* MKGridentEnum.swift in Sources */,
 				361022C32576AFBF00299E04 /* RootSelector.swift in Sources */,
+				366FCB2725A0CF6400F5AEF4 /* LanguageTableViewCell.swift in Sources */,
+				36A31ACD25A0904D001F1FE7 /* SendFeedbackProtocols.swift in Sources */,
 				361022A02576AE7700299E04 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,7 +781,7 @@
 		};
 		36C6C21525756765008D66D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86EED105F0D37BF218F5609C /* Pods-Speedometer.debug.xcconfig */;
+			baseConfigurationReference = 1AAA45830111804E8E319671 /* Pods-Speedometer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -726,7 +790,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 43THU6L26P;
 				INFOPLIST_FILE = "Speedometer/Supporting Files/Plist/Debug.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -741,7 +805,7 @@
 		};
 		36C6C21625756765008D66D5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE02E3D6AC3CDBA28042F2D4 /* Pods-Speedometer.release.xcconfig */;
+			baseConfigurationReference = 51868A0CFED05A795EFE8FC4 /* Pods-Speedometer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -749,7 +813,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43THU6L26P;
 				INFOPLIST_FILE = "Speedometer/Supporting Files/Plist/Release.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -821,7 +885,7 @@
 		};
 		36C6C2A325758CF8008D66D5 /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E405900AE501ECB8EAE8E6F1 /* Pods-Speedometer.test.xcconfig */;
+			baseConfigurationReference = F14A026D42B758BCBC6E9452 /* Pods-Speedometer.test.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -829,7 +893,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43THU6L26P;
 				INFOPLIST_FILE = "Speedometer/Supporting Files/Plist/Test.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -21,10 +21,30 @@
 "settingsFirstTitle" = "Genel";
 "settingsPoint" = "Uygulamaya Puan Ver";
 "settingsShare" = "Uygulamayı Paylaş";
+"settingsShareDescription" = "Aciklamayi Degistir";
 "settingsFeedback" = "Geri Bildirim Gönder";
+"settingsLanguage" = "Dili Seç";
+"settingsGps" = "GPS ayarları";
 
 "settingsSecondTitle" = "BENİ DESTEKLEMEK İSTER MİSİNİZ ?";
 "settingsPoint" = "Uygulamaya Puan Ver";
 "settingsMiniBox" = "Küçük Boy Hediye Pakedi";
 "settingsMediumBox" = "Orta Boy Hediye Pakedi";
 "settingsBigBox" = "Büyük Boy Hediye Pakedi";
+
+// SendFeedbackViewController
+
+"sendFeedbackTitle" = "Geri Bildirim";
+"sendFeedbackLabel" = "Geri bildirimleriniz sayesinde sizlere daha iyi bir hizmet sunabileceğiz.";
+"sendFeedbackSendButton" = "Gönder";
+"sendFeedbackTextViewPlaceHolder" = "Geri bildirimlerinizi girebilirsiniz :)";
+"sendFeedbackAlertTitle" = "Beklenmedik Hata";
+"sendFeedbackAlertTitleSuccess" = "Teşekkürler";
+"sendFeedbackAlertTitleSuccessDescription" = "Yardımınız için teşekkürler";
+"sendFeedbackAlertButtonTitle" = "Tamam";
+
+// ChangeLanguageViewController
+
+"changeLanguageTitle" = "Dil";
+"changeLanguageTurkish" = "Türkçe";
+"changeLanguageEnglish" = "İngilizce";

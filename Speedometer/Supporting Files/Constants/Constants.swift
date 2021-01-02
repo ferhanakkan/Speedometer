@@ -12,6 +12,7 @@ struct Constants {
      struct Language {
         static var langKey = "lang"
         static var langpath = "lproj"
+        static var phoneSettingsSettedLang = "phoneLangSettings"
     }
     
     struct Badge {
@@ -26,6 +27,10 @@ struct Constants {
     struct SettingsViewController {
         static var donationCell = "SettingsDonationCell"
         static var imageCell = "SettingsImageCell"
+    }
+    
+    struct ChangeLanguageViewController {
+        static var languageCell = "LanguageTableViewCell"
     }
 }
 

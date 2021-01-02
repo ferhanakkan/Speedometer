@@ -3,6 +3,16 @@
     {
       "filename" : "rate.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "rate-1.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {
