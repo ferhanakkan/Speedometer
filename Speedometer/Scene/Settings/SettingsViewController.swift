@@ -11,8 +11,6 @@ final class SettingsViewController: UIViewController {
     
     var presenter: SettingsPresenterProtocol!
     
-    let test = GPSService()
-    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.tableFooterView = UIView(frame: .zero)
@@ -29,15 +27,6 @@ final class SettingsViewController: UIViewController {
         registerTableView()
         setTableViewDelegate()
         tableView.reloadData()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        test.verifyOrAskForLocationPermission { (bool) in
-            self.test.locationDatas = { location , type in
-                print("ferhan test \(location) \(type)")
-            }
-        }
     }
 }
 

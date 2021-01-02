@@ -9,6 +9,10 @@ import Foundation
 
 struct Constants {
     
+    struct Api {
+        static var token = "token"
+    }
+    
      struct Language {
         static var langKey = "lang"
         static var langpath = "lproj"

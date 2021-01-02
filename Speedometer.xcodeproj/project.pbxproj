@@ -41,6 +41,10 @@
 		3624D0AB25A0F5C4006F20AE /* SettingsSpeedUnitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D0AA25A0F5C4006F20AE /* SettingsSpeedUnitTableViewCell.swift */; };
 		3624D0AE25A0FA66006F20AE /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D0AD25A0FA66006F20AE /* AppManager.swift */; };
 		3624D0B125A101BF006F20AE /* GPSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D0B025A101BF006F20AE /* GPSService.swift */; };
+		3624D0B525A1274D006F20AE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D0B425A1274D006F20AE /* ApiService.swift */; };
+		3624D0B925A127AE006F20AE /* ApiServiceErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D0B825A127AE006F20AE /* ApiServiceErrorHandling.swift */; };
+		3624D0BC25A1289B006F20AE /* ApiEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D0BB25A1289B006F20AE /* ApiEnum.swift */; };
+		3624D10B25A12C40006F20AE /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D10A25A12C40006F20AE /* WeatherModel.swift */; };
 		366FCB1725A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1625A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift */; };
 		366FCB1A25A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1925A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift */; };
 		366FCB1D25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1C25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift */; };
@@ -110,6 +114,10 @@
 		3624D0AA25A0F5C4006F20AE /* SettingsSpeedUnitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSpeedUnitTableViewCell.swift; sourceTree = "<group>"; };
 		3624D0AD25A0FA66006F20AE /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		3624D0B025A101BF006F20AE /* GPSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSService.swift; sourceTree = "<group>"; };
+		3624D0B425A1274D006F20AE /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		3624D0B825A127AE006F20AE /* ApiServiceErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceErrorHandling.swift; sourceTree = "<group>"; };
+		3624D0BB25A1289B006F20AE /* ApiEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEnum.swift; sourceTree = "<group>"; };
+		3624D10A25A12C40006F20AE /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		366FCB1625A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageProtocols.swift; sourceTree = "<group>"; };
 		366FCB1925A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguagesRouter.swift; sourceTree = "<group>"; };
 		366FCB1C25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguagesInteractor.swift; sourceTree = "<group>"; };
@@ -224,6 +232,7 @@
 			children = (
 				361022AC2576AEC300299E04 /* MKGridentEnum.swift */,
 				36DD404625780E52002A6A04 /* SettingsEnum.swift */,
+				3624D0BB25A1289B006F20AE /* ApiEnum.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -231,6 +240,7 @@
 		361022AF2576AF4400299E04 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3624D0B325A12718006F20AE /* ApiService */,
 				361022B02576AF4D00299E04 /* CoreRealm */,
 			);
 			path = Core;
@@ -309,6 +319,23 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		3624D0B325A12718006F20AE /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				3624D0B425A1274D006F20AE /* ApiService.swift */,
+				3624D0B825A127AE006F20AE /* ApiServiceErrorHandling.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		3624D10925A12C35006F20AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3624D10A25A12C40006F20AE /* WeatherModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		366FCB1525A0CCF800F5AEF4 /* ChangeLanguage */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +390,7 @@
 		36C6C20225756763008D66D5 /* Speedometer */ = {
 			isa = PBXGroup;
 			children = (
+				3624D10925A12C35006F20AE /* Models */,
 				3610233D2576BB8800299E04 /* Speedometer.entitlements */,
 				361023442576C67D00299E04 /* Scene */,
 				361022B42576AF6C00299E04 /* Custom Views */,
@@ -592,6 +620,7 @@
 			files = (
 				3610229B2576AE7700299E04 /* UIDate.swift in Sources */,
 				36A31ACA25A0903B001F1FE7 /* SendFeedbackRouter.swift in Sources */,
+				3624D0B525A1274D006F20AE /* ApiService.swift in Sources */,
 				366FCB1D25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift in Sources */,
 				36C6C20425756763008D66D5 /* AppDelegate.swift in Sources */,
 				36A31AC425A09019001F1FE7 /* SendFeedbackPresenter.swift in Sources */,
@@ -599,6 +628,7 @@
 				36DD404725780E52002A6A04 /* SettingsEnum.swift in Sources */,
 				361022B82576AF8100299E04 /* AnimatedSplashViewController.swift in Sources */,
 				361022A82576AE7700299E04 /* String.swift in Sources */,
+				3624D0BC25A1289B006F20AE /* ApiEnum.swift in Sources */,
 				361022A22576AE7700299E04 /* UIImageView.swift in Sources */,
 				3610229C2576AE7700299E04 /* UIStackView.swift in Sources */,
 				3610229D2576AE7700299E04 /* UIColor.swift in Sources */,
@@ -607,8 +637,10 @@
 				3610234D2576D24A00299E04 /* SettingsRouter.swift in Sources */,
 				36A31ABB25A08172001F1FE7 /* LanguageService.swift in Sources */,
 				366FCB1725A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift in Sources */,
+				3624D0B925A127AE006F20AE /* ApiServiceErrorHandling.swift in Sources */,
 				361022A32576AE7700299E04 /* UIFont.swift in Sources */,
 				36A31AB725A0813D001F1FE7 /* AlertService.swift in Sources */,
+				3624D10B25A12C40006F20AE /* WeatherModel.swift in Sources */,
 				366FCB2025A0CD4A00F5AEF4 /* ChangeLanguagesPresenter.swift in Sources */,
 				361022C42576AFBF00299E04 /* Tabbar.swift in Sources */,
 				361023492576D23C00299E04 /* SettingsProtocols.swift in Sources */,

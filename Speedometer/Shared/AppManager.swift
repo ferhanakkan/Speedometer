@@ -12,6 +12,7 @@ final class AppManager {
     static var shared = AppManager()
     
     var speedUnitType: String = ""
+    var weatherApiKey = Bundle.main.object(forInfoDictionaryKey: "WeatherApiKey") as! String
     
     func checkSpeedUnit() {
         if let speedUnit = UserDefaults.standard.value(forKey: Constants.SettingsViewController.selectedSpeedUnitKey) as? String {
