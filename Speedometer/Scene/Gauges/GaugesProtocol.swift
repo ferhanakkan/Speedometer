@@ -16,18 +16,22 @@ protocol GaugesRouterProtocol: class {
 
 protocol GaugesPresenterProtocol: class {
     var interactor: GaugesInteractorInputProtocol! { get set }
+    func viewWillAppear()
+    func resetDatas()
 }
 
 //MARK: Interactor
 
 // Interactor -> Presenter
 protocol GaugesInteractorOutputProtocol: class {
+    func weatherDetailsCompleted(weather: WeatherModel?, error: Error?)
 }
 
 // Presenter -> Interactor
 
 protocol GaugesInteractorInputProtocol: class {
     var presenter: GaugesInteractorOutputProtocol! { get set }
+    func getWeatherDetails(longitude: Double, latitude: Double)
 }
 
 //MARK: View
@@ -35,4 +39,5 @@ protocol GaugesInteractorInputProtocol: class {
 protocol GaugesViewProtocol: class {
     var presenter: GaugesPresenterProtocol! { get set }
     func chartData(data: LineChartData)
+    func weatherDatas(temperature: Double, moisture: Int)
 }

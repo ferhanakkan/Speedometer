@@ -8,5 +8,5 @@
 import Foundation
 
 enum ApiType: String {
-    case weatherApi = "api.openweathermap.org/data/2.5"
+    case weatherApi = "http://api.openweathermap.org/data/2.5"
 }

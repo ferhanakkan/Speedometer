@@ -8,26 +8,15 @@
 import Foundation
 
 struct WeatherModel: Codable {
-    let coord: Coord?
     let weather: [Weather]?
     let base: String?
     let main: Main?
     let visibility: Int?
     let wind: Wind?
-    let clouds: Clouds?
     let dt: Int?
-    let sys: Sys?
     let timezone, id: Int?
     let name: String?
     let cod: Int?
-}
-
-struct Clouds: Codable {
-    let all: Int?
-}
-
-struct Coord: Codable {
-    let lon, lat: Int?
 }
 
 struct Main: Codable {
@@ -43,11 +32,6 @@ struct Main: Codable {
         case seaLevel = "sea_level"
         case grndLevel = "grnd_level"
     }
-}
-
-struct Sys: Codable {
-    let country: String?
-    let sunrise, sunset: Int?
 }
 
 struct Weather: Codable {

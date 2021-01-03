@@ -10,7 +10,6 @@ import PromiseKit
 import UIKit
 
 class ApiService {
-//    api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
     private var baseApiUrl = ""
     private var endPoint: String = ""
     

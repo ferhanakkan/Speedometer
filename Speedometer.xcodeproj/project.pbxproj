@@ -50,6 +50,7 @@
 		3624D16C25A1ED57006F20AE /* GaugesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D16B25A1ED57006F20AE /* GaugesInteractor.swift */; };
 		3624D16F25A1ED68006F20AE /* GaugesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D16E25A1ED68006F20AE /* GaugesRouter.swift */; };
 		3624D17225A1ED79006F20AE /* GaugesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D17125A1ED79006F20AE /* GaugesProtocol.swift */; };
+		3624D17D25A22360006F20AE /* GaugeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D17C25A22360006F20AE /* GaugeService.swift */; };
 		366FCB1725A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1625A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift */; };
 		366FCB1A25A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1925A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift */; };
 		366FCB1D25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1C25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift */; };
@@ -76,6 +77,7 @@
 		36DD404425780DD7002A6A04 /* SettingsImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD404325780DD7002A6A04 /* SettingsImageCell.swift */; };
 		36DD404725780E52002A6A04 /* SettingsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD404625780E52002A6A04 /* SettingsEnum.swift */; };
 		36DD404B25781F63002A6A04 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD404A25781F63002A6A04 /* HeaderView.swift */; };
+		36E7E79E25A249100090A5DB /* CollectionAndSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E79D25A249100090A5DB /* CollectionAndSequence.swift */; };
 		55C2746EE462858C1CF271F1 /* Pods_Speedometer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBF8F2609D32889CDC4F223 /* Pods_Speedometer.framework */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +130,7 @@
 		3624D16B25A1ED57006F20AE /* GaugesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugesInteractor.swift; sourceTree = "<group>"; };
 		3624D16E25A1ED68006F20AE /* GaugesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugesRouter.swift; sourceTree = "<group>"; };
 		3624D17125A1ED79006F20AE /* GaugesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugesProtocol.swift; sourceTree = "<group>"; };
+		3624D17C25A22360006F20AE /* GaugeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeService.swift; sourceTree = "<group>"; };
 		366FCB1625A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageProtocols.swift; sourceTree = "<group>"; };
 		366FCB1925A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguagesRouter.swift; sourceTree = "<group>"; };
 		366FCB1C25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguagesInteractor.swift; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 		36DD404325780DD7002A6A04 /* SettingsImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsImageCell.swift; sourceTree = "<group>"; };
 		36DD404625780E52002A6A04 /* SettingsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEnum.swift; sourceTree = "<group>"; };
 		36DD404A25781F63002A6A04 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		36E7E79D25A249100090A5DB /* CollectionAndSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndSequence.swift; sourceTree = "<group>"; };
 		51868A0CFED05A795EFE8FC4 /* Pods-Speedometer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.release.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.release.xcconfig"; sourceTree = "<group>"; };
 		BDBF8F2609D32889CDC4F223 /* Pods_Speedometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speedometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14A026D42B758BCBC6E9452 /* Pods-Speedometer.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.test.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.test.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 				361022962576AE7700299E04 /* Encodable.swift */,
 				361022972576AE7700299E04 /* String.swift */,
 				361022982576AE7700299E04 /* Dictonary.swift */,
+				36E7E79D25A249100090A5DB /* CollectionAndSequence.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -359,6 +364,14 @@
 			path = Gauges;
 			sourceTree = "<group>";
 		};
+		3624D17B25A2234D006F20AE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3624D17C25A22360006F20AE /* GaugeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		366FCB1525A0CCF800F5AEF4 /* ChangeLanguage */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +426,7 @@
 		36C6C20225756763008D66D5 /* Speedometer */ = {
 			isa = PBXGroup;
 			children = (
+				3624D17B25A2234D006F20AE /* Service */,
 				3624D10925A12C35006F20AE /* Models */,
 				3610233D2576BB8800299E04 /* Speedometer.entitlements */,
 				361023442576C67D00299E04 /* Scene */,
@@ -673,6 +687,7 @@
 				361022E12576B64D00299E04 /* AppDelegatePushNotification.swift in Sources */,
 				361023502576D25700299E04 /* SettingsInteractor.swift in Sources */,
 				3624D0B125A101BF006F20AE /* GPSService.swift in Sources */,
+				36E7E79E25A249100090A5DB /* CollectionAndSequence.swift in Sources */,
 				36DD404B25781F63002A6A04 /* HeaderView.swift in Sources */,
 				361022A12576AE7700299E04 /* UIViewController.swift in Sources */,
 				361022A52576AE7700299E04 /* UIApplication.swift in Sources */,
@@ -684,6 +699,7 @@
 				3624D16C25A1ED57006F20AE /* GaugesInteractor.swift in Sources */,
 				361022A62576AE7700299E04 /* UITextView.swift in Sources */,
 				361022BD2576AF9900299E04 /* LoadingView.swift in Sources */,
+				3624D17D25A22360006F20AE /* GaugeService.swift in Sources */,
 				3624D0AE25A0FA66006F20AE /* AppManager.swift in Sources */,
 				3610229A2576AE7700299E04 /* UIView.swift in Sources */,
 				3624D16525A1ED3F006F20AE /* GaugesViewController.swift in Sources */,

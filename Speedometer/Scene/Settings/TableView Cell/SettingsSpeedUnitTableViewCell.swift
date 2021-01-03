@@ -49,7 +49,7 @@ extension SettingsSpeedUnitTableViewCell {
     
     private func layout() {
         contentView.backgroundColor = .clear
-        backgroundColor = .white
+        backgroundColor = .secondColor
         self.roundCornersEachCorner([.bottomLeft,.bottomRight], radius: 5)
         
         addSubview(labelTitle)
