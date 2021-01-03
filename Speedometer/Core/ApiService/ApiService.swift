@@ -153,7 +153,6 @@ class ApiService {
                 } else {
                     seal.reject(response.error!)
                 }
-
             }
         }
     }

@@ -45,6 +45,11 @@
 		3624D0B925A127AE006F20AE /* ApiServiceErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D0B825A127AE006F20AE /* ApiServiceErrorHandling.swift */; };
 		3624D0BC25A1289B006F20AE /* ApiEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D0BB25A1289B006F20AE /* ApiEnum.swift */; };
 		3624D10B25A12C40006F20AE /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D10A25A12C40006F20AE /* WeatherModel.swift */; };
+		3624D16525A1ED3F006F20AE /* GaugesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D16425A1ED3F006F20AE /* GaugesViewController.swift */; };
+		3624D16925A1ED4B006F20AE /* GaugesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D16825A1ED4B006F20AE /* GaugesPresenter.swift */; };
+		3624D16C25A1ED57006F20AE /* GaugesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D16B25A1ED57006F20AE /* GaugesInteractor.swift */; };
+		3624D16F25A1ED68006F20AE /* GaugesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D16E25A1ED68006F20AE /* GaugesRouter.swift */; };
+		3624D17225A1ED79006F20AE /* GaugesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624D17125A1ED79006F20AE /* GaugesProtocol.swift */; };
 		366FCB1725A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1625A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift */; };
 		366FCB1A25A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1925A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift */; };
 		366FCB1D25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FCB1C25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift */; };
@@ -118,6 +123,11 @@
 		3624D0B825A127AE006F20AE /* ApiServiceErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceErrorHandling.swift; sourceTree = "<group>"; };
 		3624D0BB25A1289B006F20AE /* ApiEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEnum.swift; sourceTree = "<group>"; };
 		3624D10A25A12C40006F20AE /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		3624D16425A1ED3F006F20AE /* GaugesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugesViewController.swift; sourceTree = "<group>"; };
+		3624D16825A1ED4B006F20AE /* GaugesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugesPresenter.swift; sourceTree = "<group>"; };
+		3624D16B25A1ED57006F20AE /* GaugesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugesInteractor.swift; sourceTree = "<group>"; };
+		3624D16E25A1ED68006F20AE /* GaugesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugesRouter.swift; sourceTree = "<group>"; };
+		3624D17125A1ED79006F20AE /* GaugesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugesProtocol.swift; sourceTree = "<group>"; };
 		366FCB1625A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageProtocols.swift; sourceTree = "<group>"; };
 		366FCB1925A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguagesRouter.swift; sourceTree = "<group>"; };
 		366FCB1C25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguagesInteractor.swift; sourceTree = "<group>"; };
@@ -299,6 +309,7 @@
 		361023442576C67D00299E04 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				3624D16325A1ED23006F20AE /* Gauges */,
 				361023472576D22600299E04 /* Settings */,
 			);
 			path = Scene;
@@ -334,6 +345,18 @@
 				3624D10A25A12C40006F20AE /* WeatherModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3624D16325A1ED23006F20AE /* Gauges */ = {
+			isa = PBXGroup;
+			children = (
+				3624D16425A1ED3F006F20AE /* GaugesViewController.swift */,
+				3624D16825A1ED4B006F20AE /* GaugesPresenter.swift */,
+				3624D16B25A1ED57006F20AE /* GaugesInteractor.swift */,
+				3624D16E25A1ED68006F20AE /* GaugesRouter.swift */,
+				3624D17125A1ED79006F20AE /* GaugesProtocol.swift */,
+			);
+			path = Gauges;
 			sourceTree = "<group>";
 		};
 		366FCB1525A0CCF800F5AEF4 /* ChangeLanguage */ = {
@@ -630,6 +653,7 @@
 				361022A82576AE7700299E04 /* String.swift in Sources */,
 				3624D0BC25A1289B006F20AE /* ApiEnum.swift in Sources */,
 				361022A22576AE7700299E04 /* UIImageView.swift in Sources */,
+				3624D17225A1ED79006F20AE /* GaugesProtocol.swift in Sources */,
 				3610229C2576AE7700299E04 /* UIStackView.swift in Sources */,
 				3610229D2576AE7700299E04 /* UIColor.swift in Sources */,
 				36DD404425780DD7002A6A04 /* SettingsImageCell.swift in Sources */,
@@ -654,13 +678,17 @@
 				361022A52576AE7700299E04 /* UIApplication.swift in Sources */,
 				361022A92576AE7700299E04 /* Dictonary.swift in Sources */,
 				366FCB1A25A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift in Sources */,
+				3624D16925A1ED4B006F20AE /* GaugesPresenter.swift in Sources */,
 				3610229E2576AE7700299E04 /* UITableView.swift in Sources */,
 				361022B22576AF4D00299E04 /* CoreRealm.swift in Sources */,
+				3624D16C25A1ED57006F20AE /* GaugesInteractor.swift in Sources */,
 				361022A62576AE7700299E04 /* UITextView.swift in Sources */,
 				361022BD2576AF9900299E04 /* LoadingView.swift in Sources */,
 				3624D0AE25A0FA66006F20AE /* AppManager.swift in Sources */,
 				3610229A2576AE7700299E04 /* UIView.swift in Sources */,
+				3624D16525A1ED3F006F20AE /* GaugesViewController.swift in Sources */,
 				3624D0AB25A0F5C4006F20AE /* SettingsSpeedUnitTableViewCell.swift in Sources */,
+				3624D16F25A1ED68006F20AE /* GaugesRouter.swift in Sources */,
 				361022A72576AE7700299E04 /* Encodable.swift in Sources */,
 				3610229F2576AE7700299E04 /* UITextfield.swift in Sources */,
 				36A31AC725A0902A001F1FE7 /* SendFeedbackInteractor.swift in Sources */,

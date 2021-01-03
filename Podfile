@@ -17,5 +17,7 @@ pod 'SwiftyGif'
 pod 'NVActivityIndicatorView'
 pod 'SnapKit', '~> 5.0.0'
 pod 'IQKeyboardManagerSwift'
+pod 'LMGaugeViewSwift'
+pod 'Charts'
 
 end
