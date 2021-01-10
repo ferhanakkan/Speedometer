@@ -98,9 +98,13 @@ extension SettingsSpeedUnitTableViewCell {
         if mySwitch.isOn {
             labelDescription.text = SettingsSpeedUnit.kmh.rawValue
             userdefs.setValue(SettingsSpeedUnit.kmh.rawValue, forKey: Constants.SettingsViewController.selectedSpeedUnitKey)
+            AppManager.shared.multiply = 1
+            AppManager.shared.speedUnitType = SettingsSpeedUnit.kmh.rawValue
         } else {
             labelDescription.text = SettingsSpeedUnit.mph.rawValue
             userdefs.setValue(SettingsSpeedUnit.mph.rawValue, forKey: Constants.SettingsViewController.selectedSpeedUnitKey)
+            AppManager.shared.multiply = 0.621371192
+            AppManager.shared.speedUnitType = SettingsSpeedUnit.mph.rawValue
         }
     }
 }

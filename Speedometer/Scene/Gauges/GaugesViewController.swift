@@ -87,7 +87,7 @@ final class GaugesViewController: UIViewController {
         let moistureView = DetailView(title: "Nem Durumu", description: "")
         return moistureView
     }()
-    
+     
     private let distanceView: DetailView = {
         let distanceView = DetailView(title: "Gidilen Yol", description: "")
         return distanceView
@@ -282,8 +282,9 @@ extension GaugesViewController {
 extension GaugesViewController: GaugesViewProtocol {
     
     func updateDatas(time: Int, distance: Double, maxSpeed: Double, avarageSpeed: Double, chardData: LineChartData, currentSpeed: Double, signalStatus: GPSSignalQualtyStatus) {
-        averageSpeedView.updateDescription(text: "\(avarageSpeed.format(f: ".2")) km/h")
-        maxSpeedView.updateDescription(text: "\(maxSpeed.format(f: ".2")) km/h")
+        averageSpeedView.updateDescription(text: "\(avarageSpeed.format(f: ".2")) \(AppManager.shared.speedUnitType)")
+        maxSpeedView.updateDescription(text: "\(maxSpeed.format(f: ".2")) \(AppManager.shared.speedUnitType)")
+        timeView.updateDescription(text: "\(time) sec")
         self.chart.data = chardData
         gaugeView.value = currentSpeed
         labelSignalQuality.text = signalStatus.rawValue

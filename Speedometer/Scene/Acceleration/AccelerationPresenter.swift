@@ -86,7 +86,7 @@ class AccelerationPresenter: NSObject {
             self.signalStatus = gpsSignalQualty
             
             if location.speed.nextUp >= 0 {
-                self.arraySpeedDatas.append(location.speed.nextUp)
+                self.arraySpeedDatas.append(location.speed.nextUp*AppManager.shared.multiply)
             } else {
                 self.arraySpeedDatas.append(0)
             }
@@ -103,7 +103,7 @@ class AccelerationPresenter: NSObject {
     private func updateDatas() {
         let lineChartDataToSend = setChartSetSettings(chartDataObject: self.arrayChartDatas)
         appendNewChartDatas()
-        self.view.updateDatas(time: Int(time), maxSpeed: maxSpeed, chardData: lineChartDataToSend, signalStatus: signalStatus)
+        self.view.updateDatas(time: Int(time), maxSpeed: maxSpeed, chardData: lineChartDataToSend, signalStatus: signalStatus, currentSpeed: arraySpeedDatas.last ?? 0 )
     }
     
     private func setTimer() {
@@ -124,7 +124,7 @@ extension AccelerationPresenter: AccelerationPresenterProtocol {
         maxSpeed = 0
         time = 0
         arraySpeedDatas.removeAll()
-        view.updateDatas(time: Int(time), maxSpeed: maxSpeed, chardData: setChartSetSettings(chartDataObject: []), signalStatus: signalStatus)
+        view.updateDatas(time: Int(time), maxSpeed: maxSpeed, chardData: setChartSetSettings(chartDataObject: []), signalStatus: signalStatus, currentSpeed: 0)
     }
 }
 

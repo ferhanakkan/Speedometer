@@ -50,6 +50,15 @@ final class AccelerationViewController: UIViewController {
         return chart
     }()
     
+    private let labelSpeed: UILabel = {
+        let label = UILabel()
+        label.text = "Speed: 0 KM/H"
+        label.textAlignment = .center
+        label.font = .boldSystemFont(ofSize: 40)
+        label.adjustsFontSizeToFitWidth = true
+        return label
+    }()
+    
     private let weatherView: DetailView = {
         let weatherView = DetailView(title: "Hava Durumu", description: "")
         return weatherView
@@ -112,6 +121,13 @@ extension AccelerationViewController {
             maker.height.equalTo(UIScreen.main.bounds.width-60)
         }
         
+        view.addSubview(labelSpeed)
+        labelSpeed.snp.makeConstraints { (maker) in
+            maker.leading.equalToSuperview().offset(20)
+            maker.trailing.equalToSuperview().inset(20)
+            maker.top.equalTo(self.chart.snp.bottom).offset(5)
+        }
+        
         view.addSubview(timeView)
         timeView.snp.makeConstraints { (maker) in
             maker.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-30)
@@ -137,6 +153,7 @@ extension AccelerationViewController {
         
         view.addSubview(moistureView)
         moistureView.snp.makeConstraints { (maker) in
+            maker.top.equalTo(self.labelSpeed.snp.bottom).offset(5)
             maker.trailing.equalToSuperview().inset(30)
             maker.bottom.equalTo(timeView.snp.top).offset(-20)
             maker.height.equalTo(40)
@@ -159,10 +176,11 @@ extension AccelerationViewController {
 
 extension AccelerationViewController: AccelerationViewProtocol {
     
-    func updateDatas(time: Int, maxSpeed: Double, chardData: LineChartData, signalStatus: GPSSignalQualtyStatus) {
-        timeView.updateDescription(text: "\(time) sn")
-        maxSpeedView.updateDescription(text: "\(maxSpeed.format(f: ".3")) km/h")
+    func updateDatas(time: Int, maxSpeed: Double, chardData: LineChartData, signalStatus: GPSSignalQualtyStatus, currentSpeed: Double) {
+        timeView.updateDescription(text: "\(time) sec")
+        maxSpeedView.updateDescription(text: "\(maxSpeed.format(f: ".3")) \(AppManager.shared.speedUnitType)")
         self.chart.data = chardData
+        labelSpeed.text = "\(currentSpeed.format(f: ".3")) \(AppManager.shared.speedUnitType) "
         labelSignalQuality.text = signalStatus.rawValue
     }
     

@@ -85,6 +85,11 @@
 		36E7E7AE25AA43F50090A5DB /* AccelerationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7AD25AA43F50090A5DB /* AccelerationPresenter.swift */; };
 		36E7E7B125AA44010090A5DB /* AccelerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7B025AA44010090A5DB /* AccelerationViewController.swift */; };
 		36E7E7B425AA475F0090A5DB /* AccelerationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7B325AA475F0090A5DB /* AccelerationService.swift */; };
+		36E7E7D425AB42210090A5DB /* GForceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7D325AB42210090A5DB /* GForceProtocol.swift */; };
+		36E7E7D825AB422C0090A5DB /* GForceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7D725AB422C0090A5DB /* GForceRouter.swift */; };
+		36E7E7DB25AB423C0090A5DB /* GForceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7DA25AB423C0090A5DB /* GForceInteractor.swift */; };
+		36E7E7DE25AB42490090A5DB /* GForcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7DD25AB42490090A5DB /* GForcePresenter.swift */; };
+		36E7E7E125AB425B0090A5DB /* GForceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7E025AB425B0090A5DB /* GForceViewController.swift */; };
 		55C2746EE462858C1CF271F1 /* Pods_Speedometer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBF8F2609D32889CDC4F223 /* Pods_Speedometer.framework */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +177,11 @@
 		36E7E7AD25AA43F50090A5DB /* AccelerationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationPresenter.swift; sourceTree = "<group>"; };
 		36E7E7B025AA44010090A5DB /* AccelerationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationViewController.swift; sourceTree = "<group>"; };
 		36E7E7B325AA475F0090A5DB /* AccelerationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationService.swift; sourceTree = "<group>"; };
+		36E7E7D325AB42210090A5DB /* GForceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GForceProtocol.swift; sourceTree = "<group>"; };
+		36E7E7D725AB422C0090A5DB /* GForceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GForceRouter.swift; sourceTree = "<group>"; };
+		36E7E7DA25AB423C0090A5DB /* GForceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GForceInteractor.swift; sourceTree = "<group>"; };
+		36E7E7DD25AB42490090A5DB /* GForcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GForcePresenter.swift; sourceTree = "<group>"; };
+		36E7E7E025AB425B0090A5DB /* GForceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GForceViewController.swift; sourceTree = "<group>"; };
 		51868A0CFED05A795EFE8FC4 /* Pods-Speedometer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.release.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.release.xcconfig"; sourceTree = "<group>"; };
 		BDBF8F2609D32889CDC4F223 /* Pods_Speedometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speedometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14A026D42B758BCBC6E9452 /* Pods-Speedometer.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.test.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.test.xcconfig"; sourceTree = "<group>"; };
@@ -329,6 +339,7 @@
 		361023442576C67D00299E04 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				36E7E7D225AB42070090A5DB /* GForce */,
 				36E7E7A325AA43890090A5DB /* Acceleration */,
 				3624D16325A1ED23006F20AE /* Gauges */,
 				361023472576D22600299E04 /* Settings */,
@@ -525,6 +536,18 @@
 			path = Acceleration;
 			sourceTree = "<group>";
 		};
+		36E7E7D225AB42070090A5DB /* GForce */ = {
+			isa = PBXGroup;
+			children = (
+				36E7E7D325AB42210090A5DB /* GForceProtocol.swift */,
+				36E7E7D725AB422C0090A5DB /* GForceRouter.swift */,
+				36E7E7DA25AB423C0090A5DB /* GForceInteractor.swift */,
+				36E7E7DD25AB42490090A5DB /* GForcePresenter.swift */,
+				36E7E7E025AB425B0090A5DB /* GForceViewController.swift */,
+			);
+			path = GForce;
+			sourceTree = "<group>";
+		};
 		8973944C8E31E5415748A3BA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -685,14 +708,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3610229B2576AE7700299E04 /* UIDate.swift in Sources */,
+				36E7E7D425AB42210090A5DB /* GForceProtocol.swift in Sources */,
 				36A31ACA25A0903B001F1FE7 /* SendFeedbackRouter.swift in Sources */,
 				3624D0B525A1274D006F20AE /* ApiService.swift in Sources */,
 				366FCB1D25A0CD4000F5AEF4 /* ChangeLanguagesInteractor.swift in Sources */,
 				36C6C20425756763008D66D5 /* AppDelegate.swift in Sources */,
+				36E7E7DE25AB42490090A5DB /* GForcePresenter.swift in Sources */,
 				36A31AC425A09019001F1FE7 /* SendFeedbackPresenter.swift in Sources */,
 				361023562576D28100299E04 /* SettingsViewController.swift in Sources */,
 				36DD404725780E52002A6A04 /* SettingsEnum.swift in Sources */,
 				361022B82576AF8100299E04 /* AnimatedSplashViewController.swift in Sources */,
+				36E7E7D825AB422C0090A5DB /* GForceRouter.swift in Sources */,
 				361022A82576AE7700299E04 /* String.swift in Sources */,
 				3624D0BC25A1289B006F20AE /* ApiEnum.swift in Sources */,
 				361022A22576AE7700299E04 /* UIImageView.swift in Sources */,
@@ -706,6 +732,7 @@
 				3610234D2576D24A00299E04 /* SettingsRouter.swift in Sources */,
 				36A31ABB25A08172001F1FE7 /* LanguageService.swift in Sources */,
 				366FCB1725A0CD1A00F5AEF4 /* ChangeLanguageProtocols.swift in Sources */,
+				36E7E7E125AB425B0090A5DB /* GForceViewController.swift in Sources */,
 				3624D0B925A127AE006F20AE /* ApiServiceErrorHandling.swift in Sources */,
 				361022A32576AE7700299E04 /* UIFont.swift in Sources */,
 				36A31AB725A0813D001F1FE7 /* AlertService.swift in Sources */,
@@ -746,6 +773,7 @@
 				36DD404125780DC5002A6A04 /* SettingsDonationCell.swift in Sources */,
 				361023532576D26600299E04 /* SettingsPresenter.swift in Sources */,
 				3600D06C2576ACB100E81A1B /* Constants.swift in Sources */,
+				36E7E7DB25AB423C0090A5DB /* GForceInteractor.swift in Sources */,
 				361022AD2576AEC300299E04 /* MKGridentEnum.swift in Sources */,
 				361022C32576AFBF00299E04 /* RootSelector.swift in Sources */,
 				366FCB2725A0CF6400F5AEF4 /* LanguageTableViewCell.swift in Sources */,

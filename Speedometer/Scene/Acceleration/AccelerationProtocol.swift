@@ -39,5 +39,5 @@ protocol AccelerationInteractorInputProtocol: class {
 protocol AccelerationViewProtocol: class {
     var presenter: AccelerationPresenterProtocol! { get set }
     func weatherDatas(temperature: Double, moisture: Int)
-    func updateDatas(time: Int, maxSpeed: Double, chardData: LineChartData, signalStatus:  GPSSignalQualtyStatus)
+    func updateDatas(time: Int, maxSpeed: Double, chardData: LineChartData, signalStatus:  GPSSignalQualtyStatus, currentSpeed: Double)
 }

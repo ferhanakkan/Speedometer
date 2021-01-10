@@ -16,7 +16,6 @@ final class SendFeedbackViewController: UIViewController {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 17)
         label.numberOfLines = 0
-        label.textColor = .orange
         label.textAlignment = .left
         label.text = "sendFeedbackLabel".localized()
         return label
@@ -30,7 +29,7 @@ final class SendFeedbackViewController: UIViewController {
         textView.textColor = UIColor.lightGray
         textView.isEditable = true
         textView.isUserInteractionEnabled = true
-        textView.borderAndCorner(radius: 8, color: .red, width: 2)
+        textView.borderAndCorner(radius: 8, color: .lightGray, width: 2)
         textView.delegate = self
         return textView
     }()

@@ -50,7 +50,7 @@ class GaugesPresenter: NSObject {
             self.signalStatus = gpsSignalQualty
             self.arrayLocationDatas.append(location)
             if location.speed.nextUp >= 0 {
-                self.arraySpeedDatas.append(location.speed.nextUp)
+                self.arraySpeedDatas.append(location.speed.nextUp*AppManager.shared.multiply)
             } else {
                 self.arraySpeedDatas.append(0)
             }

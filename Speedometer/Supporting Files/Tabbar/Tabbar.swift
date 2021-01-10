@@ -12,9 +12,11 @@ class Tabbar {
         
         let tabController = UITabBarController()
         
-        let navigationArray = [UINavigationController(rootViewController: SettingsRouter().controller),
-                               UINavigationController(rootViewController: GaugesRouter().controller),
-                               UINavigationController(rootViewController: AccelerationRouter().controller) ]
+        let navigationArray = [
+            UINavigationController(rootViewController: GaugesRouter().controller),
+            UINavigationController(rootViewController: AccelerationRouter().controller),
+            UINavigationController(rootViewController: GForceRouter().controller),
+            UINavigationController(rootViewController: SettingsRouter().controller)]
         
         for index in 0 ..< navigationArray.count {
             navigationArray[index].navigationBar.barTintColor = .firstColor
@@ -30,9 +32,10 @@ class Tabbar {
 //        tabController.tabBar.items?[0].image = UIImage(named: "LaunchScreen")
 //        tabController.tabBar.items![0].selectedImage = UIImage(named: "LaunchScreen")
 
-        tabController.tabBar.items![0].title = "tabbar.test".localized()
-        tabController.tabBar.items![1].title = "Kadran"
-        tabController.tabBar.items![2].title = "Hizlanma"
+        tabController.tabBar.items![0].title = "Kadran"
+        tabController.tabBar.items![1].title = "Hizlanma"
+        tabController.tabBar.items![2].title = "G-Force"
+        tabController.tabBar.items![3].title = "tabbar.test".localized()
 
         return tabController
     }
