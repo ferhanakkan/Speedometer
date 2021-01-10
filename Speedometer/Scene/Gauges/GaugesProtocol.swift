@@ -38,6 +38,6 @@ protocol GaugesInteractorInputProtocol: class {
 
 protocol GaugesViewProtocol: class {
     var presenter: GaugesPresenterProtocol! { get set }
-    func chartData(data: LineChartData)
     func weatherDatas(temperature: Double, moisture: Int)
+    func updateDatas(time: Int, distance: Double, maxSpeed: Double, avarageSpeed: Double, chardData: LineChartData, currentSpeed: Double, signalStatus:  GPSSignalQualtyStatus)
 }

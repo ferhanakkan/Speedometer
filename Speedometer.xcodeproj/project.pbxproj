@@ -78,6 +78,13 @@
 		36DD404725780E52002A6A04 /* SettingsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD404625780E52002A6A04 /* SettingsEnum.swift */; };
 		36DD404B25781F63002A6A04 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD404A25781F63002A6A04 /* HeaderView.swift */; };
 		36E7E79E25A249100090A5DB /* CollectionAndSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E79D25A249100090A5DB /* CollectionAndSequence.swift */; };
+		36E7E7A125AA05C10090A5DB /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7A025AA05C10090A5DB /* Double.swift */; };
+		36E7E7A525AA43B80090A5DB /* AccelerationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7A425AA43B80090A5DB /* AccelerationProtocol.swift */; };
+		36E7E7A825AA43D40090A5DB /* AccelerationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7A725AA43D40090A5DB /* AccelerationRouter.swift */; };
+		36E7E7AB25AA43E10090A5DB /* AccelerationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7AA25AA43E10090A5DB /* AccelerationInteractor.swift */; };
+		36E7E7AE25AA43F50090A5DB /* AccelerationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7AD25AA43F50090A5DB /* AccelerationPresenter.swift */; };
+		36E7E7B125AA44010090A5DB /* AccelerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7B025AA44010090A5DB /* AccelerationViewController.swift */; };
+		36E7E7B425AA475F0090A5DB /* AccelerationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7B325AA475F0090A5DB /* AccelerationService.swift */; };
 		55C2746EE462858C1CF271F1 /* Pods_Speedometer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBF8F2609D32889CDC4F223 /* Pods_Speedometer.framework */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +165,13 @@
 		36DD404625780E52002A6A04 /* SettingsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEnum.swift; sourceTree = "<group>"; };
 		36DD404A25781F63002A6A04 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		36E7E79D25A249100090A5DB /* CollectionAndSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndSequence.swift; sourceTree = "<group>"; };
+		36E7E7A025AA05C10090A5DB /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		36E7E7A425AA43B80090A5DB /* AccelerationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationProtocol.swift; sourceTree = "<group>"; };
+		36E7E7A725AA43D40090A5DB /* AccelerationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationRouter.swift; sourceTree = "<group>"; };
+		36E7E7AA25AA43E10090A5DB /* AccelerationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationInteractor.swift; sourceTree = "<group>"; };
+		36E7E7AD25AA43F50090A5DB /* AccelerationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationPresenter.swift; sourceTree = "<group>"; };
+		36E7E7B025AA44010090A5DB /* AccelerationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationViewController.swift; sourceTree = "<group>"; };
+		36E7E7B325AA475F0090A5DB /* AccelerationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationService.swift; sourceTree = "<group>"; };
 		51868A0CFED05A795EFE8FC4 /* Pods-Speedometer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.release.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.release.xcconfig"; sourceTree = "<group>"; };
 		BDBF8F2609D32889CDC4F223 /* Pods_Speedometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speedometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14A026D42B758BCBC6E9452 /* Pods-Speedometer.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.test.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.test.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +252,7 @@
 				361022972576AE7700299E04 /* String.swift */,
 				361022982576AE7700299E04 /* Dictonary.swift */,
 				36E7E79D25A249100090A5DB /* CollectionAndSequence.swift */,
+				36E7E7A025AA05C10090A5DB /* Double.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -314,6 +329,7 @@
 		361023442576C67D00299E04 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				36E7E7A325AA43890090A5DB /* Acceleration */,
 				3624D16325A1ED23006F20AE /* Gauges */,
 				361023472576D22600299E04 /* Settings */,
 			);
@@ -368,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				3624D17C25A22360006F20AE /* GaugeService.swift */,
+				36E7E7B325AA475F0090A5DB /* AccelerationService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -494,6 +511,18 @@
 				3624D0AA25A0F5C4006F20AE /* SettingsSpeedUnitTableViewCell.swift */,
 			);
 			path = "TableView Cell";
+			sourceTree = "<group>";
+		};
+		36E7E7A325AA43890090A5DB /* Acceleration */ = {
+			isa = PBXGroup;
+			children = (
+				36E7E7A425AA43B80090A5DB /* AccelerationProtocol.swift */,
+				36E7E7A725AA43D40090A5DB /* AccelerationRouter.swift */,
+				36E7E7AA25AA43E10090A5DB /* AccelerationInteractor.swift */,
+				36E7E7AD25AA43F50090A5DB /* AccelerationPresenter.swift */,
+				36E7E7B025AA44010090A5DB /* AccelerationViewController.swift */,
+			);
+			path = Acceleration;
 			sourceTree = "<group>";
 		};
 		8973944C8E31E5415748A3BA /* Pods */ = {
@@ -668,7 +697,9 @@
 				3624D0BC25A1289B006F20AE /* ApiEnum.swift in Sources */,
 				361022A22576AE7700299E04 /* UIImageView.swift in Sources */,
 				3624D17225A1ED79006F20AE /* GaugesProtocol.swift in Sources */,
+				36E7E7A525AA43B80090A5DB /* AccelerationProtocol.swift in Sources */,
 				3610229C2576AE7700299E04 /* UIStackView.swift in Sources */,
+				36E7E7B425AA475F0090A5DB /* AccelerationService.swift in Sources */,
 				3610229D2576AE7700299E04 /* UIColor.swift in Sources */,
 				36DD404425780DD7002A6A04 /* SettingsImageCell.swift in Sources */,
 				361022A42576AE7700299E04 /* UILabel.swift in Sources */,
@@ -678,6 +709,7 @@
 				3624D0B925A127AE006F20AE /* ApiServiceErrorHandling.swift in Sources */,
 				361022A32576AE7700299E04 /* UIFont.swift in Sources */,
 				36A31AB725A0813D001F1FE7 /* AlertService.swift in Sources */,
+				36E7E7AB25AA43E10090A5DB /* AccelerationInteractor.swift in Sources */,
 				3624D10B25A12C40006F20AE /* WeatherModel.swift in Sources */,
 				366FCB2025A0CD4A00F5AEF4 /* ChangeLanguagesPresenter.swift in Sources */,
 				361022C42576AFBF00299E04 /* Tabbar.swift in Sources */,
@@ -693,6 +725,8 @@
 				361022A52576AE7700299E04 /* UIApplication.swift in Sources */,
 				361022A92576AE7700299E04 /* Dictonary.swift in Sources */,
 				366FCB1A25A0CD2D00F5AEF4 /* ChangeLanguagesRouter.swift in Sources */,
+				36E7E7AE25AA43F50090A5DB /* AccelerationPresenter.swift in Sources */,
+				36E7E7A125AA05C10090A5DB /* Double.swift in Sources */,
 				3624D16925A1ED4B006F20AE /* GaugesPresenter.swift in Sources */,
 				3610229E2576AE7700299E04 /* UITableView.swift in Sources */,
 				361022B22576AF4D00299E04 /* CoreRealm.swift in Sources */,
@@ -701,6 +735,7 @@
 				361022BD2576AF9900299E04 /* LoadingView.swift in Sources */,
 				3624D17D25A22360006F20AE /* GaugeService.swift in Sources */,
 				3624D0AE25A0FA66006F20AE /* AppManager.swift in Sources */,
+				36E7E7B125AA44010090A5DB /* AccelerationViewController.swift in Sources */,
 				3610229A2576AE7700299E04 /* UIView.swift in Sources */,
 				3624D16525A1ED3F006F20AE /* GaugesViewController.swift in Sources */,
 				3624D0AB25A0F5C4006F20AE /* SettingsSpeedUnitTableViewCell.swift in Sources */,
@@ -715,6 +750,7 @@
 				361022C32576AFBF00299E04 /* RootSelector.swift in Sources */,
 				366FCB2725A0CF6400F5AEF4 /* LanguageTableViewCell.swift in Sources */,
 				36A31ACD25A0904D001F1FE7 /* SendFeedbackProtocols.swift in Sources */,
+				36E7E7A825AA43D40090A5DB /* AccelerationRouter.swift in Sources */,
 				361022A02576AE7700299E04 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

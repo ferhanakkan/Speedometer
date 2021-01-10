@@ -14,8 +14,11 @@ final class GaugesViewController: UIViewController {
     
     var presenter: GaugesPresenterProtocol!
     
-    private let buttonReset: UIBarButtonItem = {
-        let button = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(buttonResetPressed))
+    private lazy var buttonReset: UIBarButtonItem = {
+        let button = UIBarButtonItem.init(title: "Reset",
+                                     style: .plain,
+                                     target: self,
+                                     action: #selector(buttonResetPressed))
         return button
     }()
     
@@ -46,12 +49,12 @@ final class GaugesViewController: UIViewController {
         yAxis.labelTextColor = .red
         yAxis.axisLineColor = .blue
         
+        
         chart.xAxis.labelPosition = .bottom
         chart.xAxis.labelFont = .boldSystemFont(ofSize: 12)
         chart.xAxis.setLabelCount(10, force: true)
         chart.xAxis.labelTextColor = .red
         chart.xAxis.axisLineColor = .blue
-//        chart.animate(xAxisDuration: 2.0)
         chart.isHidden = true
         return chart
     }()
@@ -184,26 +187,25 @@ extension GaugesViewController {
             maker.width.equalTo(averageSpeedView.snp.width)
         }
         
-        view.addSubview(distanceView)
-        distanceView.snp.makeConstraints { (maker) in
-            maker.leading.equalToSuperview().offset(30)
-            maker.bottom.equalTo(averageSpeedView.snp.top).offset(-20)
-            maker.height.equalTo(40)
-        }
+//        view.addSubview(distanceView)
+//        distanceView.snp.makeConstraints { (maker) in
+//            maker.leading.equalToSuperview().offset(30)
+//            maker.bottom.equalTo(averageSpeedView.snp.top).offset(-20)
+//            maker.height.equalTo(40)
+//        }
         
         view.addSubview(timeView)
         timeView.snp.makeConstraints { (maker) in
             maker.trailing.equalToSuperview().inset(30)
             maker.bottom.equalTo(maxSpeedView.snp.top).offset(-20)
             maker.height.equalTo(40)
-            maker.leading.equalTo(distanceView.snp.trailing).offset(20)
-            maker.width.equalTo(distanceView.snp.width)
+            maker.leading.equalToSuperview().offset(30)
         }
         
         view.addSubview(weatherView)
         weatherView.snp.makeConstraints { (maker) in
             maker.leading.equalToSuperview().offset(30)
-            maker.bottom.equalTo(distanceView.snp.top).offset(-20)
+            maker.bottom.equalTo(timeView.snp.top).offset(-20)
             maker.height.equalTo(40)
         }
         
@@ -264,11 +266,11 @@ extension GaugesViewController: GaugeViewDelegate {
 
 extension GaugesViewController {
     
-    @objc func buttonResetPressed() {
+    @objc private func buttonResetPressed() {
         presenter.resetDatas()
     }
     
-    @objc func buttonChartTypePressed() {
+    @objc private func buttonChartTypePressed() {
         gaugeView.isHidden = !gaugeView.isHidden
         chart.isHidden = !chart.isHidden
         buttonChartTypeSelector.isSelected = !buttonChartTypeSelector.isSelected
@@ -278,8 +280,13 @@ extension GaugesViewController {
 //MARK: Protocols
 
 extension GaugesViewController: GaugesViewProtocol {
-    func chartData(data: LineChartData) {
-        chart.data = data
+    
+    func updateDatas(time: Int, distance: Double, maxSpeed: Double, avarageSpeed: Double, chardData: LineChartData, currentSpeed: Double, signalStatus: GPSSignalQualtyStatus) {
+        averageSpeedView.updateDescription(text: "\(avarageSpeed.format(f: ".2")) km/h")
+        maxSpeedView.updateDescription(text: "\(maxSpeed.format(f: ".2")) km/h")
+        self.chart.data = chardData
+        gaugeView.value = currentSpeed
+        labelSignalQuality.text = signalStatus.rawValue
     }
     
     func weatherDatas(temperature: Double, moisture: Int) {

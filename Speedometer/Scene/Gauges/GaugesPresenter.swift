@@ -18,7 +18,7 @@ class GaugesPresenter: NSObject {
     private var avarageSpeed: Double = 0
     private var distance: Double = 0
     private var maxSpeed: Double = 0
-    private var time: Double = 0
+    private var time: Int = 0
     private var isFirstTimeWeatherRequest = true
     private var signalStatus: GPSSignalQualtyStatus = .noSignal
     private var arrayLocationDatas: [CLLocation] = []
@@ -28,13 +28,11 @@ class GaugesPresenter: NSObject {
     private var chartSettings: LineChartDataSet!
     private var chartData: LineChartData!
     private var arrayChartDatas: [ChartDataEntry] = []
-//    private let testChartDatas: [ChartDataEntry] = [ChartDataEntry(x: 0, y: 0), ChartDataEntry(x: 2, y: 2),ChartDataEntry(x: 3, y: 3), ChartDataEntry(x: 1, y: 4)]
     
     override init() {
         super.init()
-//        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
-//            self.setChartSetSettings(chartDataObject: self.testChartDatas)
-//        }
+        setTimer()
+        sendDatas()
     }
     
     private func verifyLocationpermission() {
@@ -51,8 +49,11 @@ class GaugesPresenter: NSObject {
                                        longitude: location.coordinate.longitude)
             self.signalStatus = gpsSignalQualty
             self.arrayLocationDatas.append(location)
-            self.arraySpeedDatas.append(location.speed.nextUp)
-            
+            if location.speed.nextUp >= 0 {
+                self.arraySpeedDatas.append(location.speed.nextUp)
+            } else {
+                self.arraySpeedDatas.append(0)
+            }
         }
     }
     
@@ -66,10 +67,17 @@ class GaugesPresenter: NSObject {
     private func setTimer() {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             self.time += 1
+            self.calculateChartDatas()
         }
     }
     
-    private func setChartSetSettings(chartDataObject: [ChartDataEntry]) {
+    private func sendDatas() {
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+            self.updateDatas()
+        }
+    }
+    
+    private func setChartSetSettings(chartDataObject: [ChartDataEntry]) -> LineChartData {
         chartSettings = LineChartDataSet(entries: chartDataObject, label: "Speed Chart")
         chartSettings.drawCirclesEnabled = false
         chartSettings.mode = .cubicBezier
@@ -81,7 +89,7 @@ class GaugesPresenter: NSObject {
         chartSettings.drawVerticalHighlightIndicatorEnabled = false
         chartData = LineChartData(dataSet: chartSettings)
         chartData.setDrawValues(false)
-        view.chartData(data: chartData)
+        return chartData
     }
     
     private func calculateAverageSpeed() {
@@ -99,16 +107,42 @@ class GaugesPresenter: NSObject {
         if arraySpeedDatas.isEmpty {
             maxSpeed = 0
         } else {
-            maxSpeed = arraySpeedDatas.max()!
+            if let maxData = arraySpeedDatas.max() {
+                if maxData >= 0.1 {
+                    maxSpeed = maxData
+                } else {
+                    maxSpeed = 0
+                }
+            } else {
+                maxSpeed = 0
+            }
         }
     }
     
     private func calculateDistance() {
-        
+        distance = 0
+//        if arraySpeedDatas.isEmpty {
+//            distance = 0
+//        } else {
+//
+//        }
     }
     
     private func calculateChartDatas() {
+        let doubleTime = Double(self.time)
+        let lastSpeed = self.arraySpeedDatas.last ?? 0
+        self.arrayChartDatas.append(ChartDataEntry(x: doubleTime, y: lastSpeed))
+    }
+    
+    private func updateDatas() {
+        calculateDistance()
+        calculateMaxSpeed()
+        calculateAverageSpeed()
         
+        let lineChartDataToSend = setChartSetSettings(chartDataObject: self.arrayChartDatas)
+        guard let currentSpeedToSend = arraySpeedDatas.last else { return }
+
+        view.updateDatas(time: time, distance: distance, maxSpeed: maxSpeed, avarageSpeed: avarageSpeed, chardData: lineChartDataToSend, currentSpeed: currentSpeedToSend, signalStatus: signalStatus)
     }
 }
 
@@ -124,6 +158,9 @@ extension GaugesPresenter: GaugesPresenterProtocol {
         maxSpeed = 0
         arrayLocationDatas.removeAll()
         arrayChartDatas.removeAll()
+        arraySpeedDatas.removeAll()
+        
+        view.updateDatas(time: time, distance: distance, maxSpeed: maxSpeed, avarageSpeed: avarageSpeed, chardData: setChartSetSettings(chartDataObject: []), currentSpeed: 0.0, signalStatus: signalStatus)
     }
 }
 

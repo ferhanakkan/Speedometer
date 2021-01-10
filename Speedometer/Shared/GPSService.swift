@@ -8,11 +8,11 @@
 import UIKit
 import CoreLocation
 
-enum GPSSignalQualtyStatus {
-    case noSignal
-    case poorSignal
-    case avarageSignal
-    case fullSignal
+enum GPSSignalQualtyStatus: String {
+    case noSignal = "No Signal"
+    case poorSignal = "Poor Signal"
+    case avarageSignal = "Average Signal"
+    case fullSignal = "Full Signal"
 }
 
 class GPSService: NSObject {
