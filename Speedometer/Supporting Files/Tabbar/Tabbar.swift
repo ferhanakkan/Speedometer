@@ -29,13 +29,19 @@ class Tabbar {
         tabController.tabBar.tintColor = .textColor
         
         
-//        tabController.tabBar.items?[0].image = UIImage(named: "LaunchScreen")
-//        tabController.tabBar.items![0].selectedImage = UIImage(named: "LaunchScreen")
+        tabController.tabBar.items?[0].image = UIImage(named: "gaugeTabbar")
+        tabController.tabBar.items![0].selectedImage = UIImage(named: "gaugeTabbar")
+        tabController.tabBar.items?[1].image = UIImage(named: "pedals")
+        tabController.tabBar.items![1].selectedImage = UIImage(named: "pedals")
+        tabController.tabBar.items?[2].image = UIImage(named: "g")
+        tabController.tabBar.items![2].selectedImage = UIImage(named: "g")
+        tabController.tabBar.items?[3].image = UIImage(named: "settings")
+        tabController.tabBar.items![3].selectedImage = UIImage(named: "settings")
 
-        tabController.tabBar.items![0].title = "Kadran"
-        tabController.tabBar.items![1].title = "Hizlanma"
-        tabController.tabBar.items![2].title = "G-Force"
-        tabController.tabBar.items![3].title = "tabbar.test".localized()
+        tabController.tabBar.items![0].title = "gauge".localized()
+        tabController.tabBar.items![1].title = "acceleration".localized()
+        tabController.tabBar.items![2].title = "gForce".localized()
+        tabController.tabBar.items![3].title = "settings".localized()
 
         return tabController
     }

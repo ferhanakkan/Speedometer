@@ -15,7 +15,7 @@ final class GForceViewController: UIViewController {
     var presenter: GForcePresenterProtocol!
     
     private lazy var buttonReset: UIBarButtonItem = {
-        let button = UIBarButtonItem.init(title: "Reset",
+        let button = UIBarButtonItem.init(title: "reset".localized(),
                                      style: .plain,
                                      target: self,
                                      action: #selector(buttonResetPressed))
@@ -26,13 +26,13 @@ final class GForceViewController: UIViewController {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 30)
         label.adjustsFontSizeToFitWidth = true
-        label.text = "X Ekseni"
+        label.text = "gForceXAxis".localized()
         return label
     }()
     
     private let labelYGforce: UILabel = {
         let label = UILabel()
-        label.text = "Y Ekseni"
+        label.text = "gForceYAxis".localized()
         label.font = .boldSystemFont(ofSize: 30)
         label.adjustsFontSizeToFitWidth = true
         return label
@@ -41,7 +41,7 @@ final class GForceViewController: UIViewController {
     private let labelZGforce: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 30)
-        label.text = "Z Ekseni"
+        label.text = "gForceZAxis".localized()
         label.adjustsFontSizeToFitWidth = true
         return label
     }()
@@ -62,12 +62,12 @@ final class GForceViewController: UIViewController {
         label.numberOfLines = 4
         label.adjustsFontSizeToFitWidth = true
         label.textAlignment = .center
-        label.text = "Test yazisi"
+        label.text = "gForceDescription".localized()
         return label
     }()
     
     private let viewMaxGForce: DetailView = {
-        let viewMaxGForce = DetailView(title: "Max G-Force", description: "")
+        let viewMaxGForce = DetailView(title: "gForceMaxForce".localized(), description: "")
         return viewMaxGForce
     }()
     
@@ -93,7 +93,7 @@ extension GForceViewController {
         self.tabBarController?.tabBar.tintColor = .textColor
         self.tabBarController?.tabBar.barTintColor = .firstColor
         navigationItem.rightBarButtonItem = buttonReset
-        title = "G-Force"
+        title = "gForceTitle".localized()
     }
     
     private func layout() {
@@ -161,9 +161,9 @@ extension GForceViewController {
 
 extension GForceViewController: GForceViewProtocol {
     func updateDatas(x: Double, y: Double, z: Double, calculatedGForece: Double, maxGPower: Double) {
-        labelXGforce.text = "X Ekseni:" + x.format(f: ".8")
-        labelYGforce.text = "Y Ekseni:" + y.format(f: ".8")
-        labelZGforce.text = "Z Ekseni:" + z.format(f: ".8")
+        labelXGforce.text = "\("gForceXAxis".localized()):" + x.format(f: ".8")
+        labelYGforce.text = "\("gForceYAxis".localized()):" + y.format(f: ".8")
+        labelZGforce.text = "\("gForceZAxis".localized()):" + z.format(f: ".8")
         labelCalculatedGforce.text = "\(calculatedGForece.format(f: ".5")) G"
         viewMaxGForce.updateDescription(text: "\(maxGPower.format(f: ".3")) G")
     }

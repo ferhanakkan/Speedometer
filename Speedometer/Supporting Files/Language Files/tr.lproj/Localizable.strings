@@ -6,12 +6,50 @@
   
 */
 
-"test-Lang" = "tr";
-"tabbar.test" = "test tr";
+//Tabbar
+
+"gauge" = "Kadran";
+"acceleration" = "Hızlanma";
+"gForce" = "G Kuvveti";
+"settings" = "Ayarlar";
 
 
 "alertTitle" = "Hata";
 "alertOkButton" = "Tamam";
+"reset" = "Sıfırla";
+
+//G Force
+
+"gForceTitle" = "G Kuvveti";
+"gForceXAxis" = "X Ekseni";
+"gForceYAxis" = "Y Ekseni";
+"gForceZAxis" = "Z Ekseni";
+"gForceDescription" = "Daha doğru sonuç almak için cihazınızı aracınızda dik şekilde sabit tutun.";
+"gForceMaxForce" = "En Yüksek G-Force";
+
+//Acceleration
+
+"accelerationTitle" = "Hızlanma";
+"accelerationSignalQuality" = "Sinyal Kalitesi";
+"accelerationSpeed" = "Hız";
+"accelerationWeatherStatus" = "Hava Durumu";
+"accelerationMoisture" = "Nem";
+"accelerationTime" = "Zaman";
+"accelerationMaxSpeed" = "Max Hız";
+"accelerationSeconds" = "Saniye";
+
+
+//Gauge
+
+"gaugeTitle" = "Hızlanma";
+"gaugeSignalQuality" = "Sinyal Kalitesi";
+"gaugeSpeed" = "Hız";
+"gaugeWeatherStatus" = "Hava Durumu";
+"gaugeMoisture" = "Nem";
+"gaugeTime" = "Zaman";
+"gaugeMaxSpeed" = "Max Hız";
+"gaugeAverageSpeed" = "Ortalama Hız";
+"gaugeSeconds" = "Saniye";
 
 
 // SettingsViewController
@@ -21,7 +59,7 @@
 "settingsFirstTitle" = "Genel";
 "settingsPoint" = "Uygulamaya Puan Ver";
 "settingsShare" = "Uygulamayı Paylaş";
-"settingsShareDescription" = "Aciklamayi Degistir";
+"settingsShareDescription" = "DBN cihazı yerine kullanabileceğin bi uygulama buldum. Link'ten hemen indirebilirsin.";
 "settingsFeedback" = "Geri Bildirim Gönder";
 "settingsLanguage" = "Dili Seç";
 "settingsGps" = "GPS ayarları";
@@ -60,3 +98,8 @@
 "gpsErrorTitle" = "Uyarı";
 "gpsErrorButton" = "Hızınızı hesaplayabilmemiz için konum bilginize ihtiyaç duymaktayız.";
 "gpsErrorToSettings" = "Ayarlara Git";
+"gpsNoSignal" = "Sinyal Yok";
+"gpsErrorPoorSignal" = "Kötü Sinyal";
+"gpsErrorAverageSignal" = "Ortalama Sinyal";
+"gpsErrorFullSignal" = "Tam Sinyal";
+

@@ -15,7 +15,7 @@ final class GaugesViewController: UIViewController {
     var presenter: GaugesPresenterProtocol!
     
     private lazy var buttonReset: UIBarButtonItem = {
-        let button = UIBarButtonItem.init(title: "Reset",
+        let button = UIBarButtonItem.init(title: "reset".localized(),
                                      style: .plain,
                                      target: self,
                                      action: #selector(buttonResetPressed))
@@ -25,7 +25,7 @@ final class GaugesViewController: UIViewController {
     private let labelSignalQuality: UILabel = {
         let label = UILabel()
         label.textColor = .green
-        label.text = "Signal Quality"
+        label.text = "gaugeSignalQuality".localized()
         label.textAlignment = .center
         label.font = .boldSystemFont(ofSize: 20)
         return label
@@ -79,32 +79,32 @@ final class GaugesViewController: UIViewController {
     }()
     
     private let weatherView: DetailView = {
-        let weatherView = DetailView(title: "Hava Durumu", description: "")
+        let weatherView = DetailView(title: "gaugeWeatherStatus".localized(), description: "")
         return weatherView
     }()
     
     private let moistureView: DetailView = {
-        let moistureView = DetailView(title: "Nem Durumu", description: "")
+        let moistureView = DetailView(title: "gaugeMoisture".localized(), description: "")
         return moistureView
     }()
      
     private let distanceView: DetailView = {
-        let distanceView = DetailView(title: "Gidilen Yol", description: "")
+        let distanceView = DetailView(title: "", description: "")
         return distanceView
     }()
     
     private let timeView: DetailView = {
-        let timeView = DetailView(title: "Zaman", description: "")
+        let timeView = DetailView(title: "gaugeTime".localized(), description: "")
         return timeView
     }()
     
     private let averageSpeedView: DetailView = {
-        let averageSpeedView = DetailView(title: "Ortalama Hiz", description: "")
+        let averageSpeedView = DetailView(title: "gaugeAverageSpeed".localized(), description: "")
         return averageSpeedView
     }()
     
     private let maxSpeedView: DetailView = {
-        let maxSpeedView = DetailView(title: "Max Hiz", description: "")
+        let maxSpeedView = DetailView(title: "gaugeMaxSpeed".localized(), description: "")
         return maxSpeedView
     }()
     
@@ -137,7 +137,7 @@ extension GaugesViewController {
         self.tabBarController?.tabBar.tintColor = .textColor
         self.tabBarController?.tabBar.barTintColor = .firstColor
         navigationItem.rightBarButtonItem = buttonReset
-        title = "Change IT"
+        title = "gaugeTitle".localized()
     }
     
     private func layout() {
@@ -285,10 +285,16 @@ extension GaugesViewController: GaugesViewProtocol {
     func updateDatas(time: Int, distance: Double, maxSpeed: Double, avarageSpeed: Double, chardData: LineChartData, currentSpeed: Double, signalStatus: GPSSignalQualtyStatus) {
         averageSpeedView.updateDescription(text: "\(avarageSpeed.format(f: ".2")) \(AppManager.shared.speedUnitType)")
         maxSpeedView.updateDescription(text: "\(maxSpeed.format(f: ".2")) \(AppManager.shared.speedUnitType)")
-        timeView.updateDescription(text: "\(time) sec")
+        timeView.updateDescription(text: "\(time) \("gaugeSeconds".localized())")
         self.chart.data = chardData
         gaugeView.value = currentSpeed
-        labelSignalQuality.text = signalStatus.rawValue
+        labelSignalQuality.text = signalStatus.rawValue.localized()
+        switch signalStatus {
+        case .noSignal, .poorSignal:
+            labelSignalQuality.textColor = .red
+        case .avarageSignal, .fullSignal:
+            labelSignalQuality.textColor = .green
+        }
     }
     
     func weatherDatas(temperature: Double, moisture: Int) {

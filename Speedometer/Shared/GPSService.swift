@@ -9,10 +9,10 @@ import UIKit
 import CoreLocation
 
 enum GPSSignalQualtyStatus: String {
-    case noSignal = "No Signal"
-    case poorSignal = "Poor Signal"
-    case avarageSignal = "Average Signal"
-    case fullSignal = "Full Signal"
+    case noSignal = "gpsNoSignal"
+    case poorSignal = "gpsErrorPoorSignal"
+    case avarageSignal = "gpsErrorAverageSignal"
+    case fullSignal = "gpsErrorFullSignal"
 }
 
 class GPSService: NSObject {

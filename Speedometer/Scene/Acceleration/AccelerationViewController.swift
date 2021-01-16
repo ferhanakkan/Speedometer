@@ -15,7 +15,7 @@ final class AccelerationViewController: UIViewController {
     var presenter: AccelerationPresenterProtocol!
     
     private lazy var buttonReset: UIBarButtonItem = {
-        let button = UIBarButtonItem.init(title: "Reset",
+        let button = UIBarButtonItem.init(title: "reset".localized(),
                                      style: .plain,
                                      target: self,
                                      action: #selector(buttonResetPressed))
@@ -25,7 +25,7 @@ final class AccelerationViewController: UIViewController {
     private let labelSignalQuality: UILabel = {
         let label = UILabel()
         label.textColor = .green
-        label.text = "Signal Quality"
+        label.text = "accelerationSignalQuality".localized()
         label.textAlignment = .center
         label.font = .boldSystemFont(ofSize: 20)
         return label
@@ -52,7 +52,7 @@ final class AccelerationViewController: UIViewController {
     
     private let labelSpeed: UILabel = {
         let label = UILabel()
-        label.text = "Speed: 0 KM/H"
+        label.text = "\("accelerationSpeed".localized()): 0 KM/H"
         label.textAlignment = .center
         label.font = .boldSystemFont(ofSize: 40)
         label.adjustsFontSizeToFitWidth = true
@@ -60,22 +60,22 @@ final class AccelerationViewController: UIViewController {
     }()
     
     private let weatherView: DetailView = {
-        let weatherView = DetailView(title: "Hava Durumu", description: "")
+        let weatherView = DetailView(title: "accelerationWeatherStatus".localized(), description: "")
         return weatherView
     }()
     
     private let moistureView: DetailView = {
-        let moistureView = DetailView(title: "Nem Durumu", description: "")
+        let moistureView = DetailView(title: "accelerationMoisture".localized(), description: "")
         return moistureView
     }()
     
     private let timeView: DetailView = {
-        let timeView = DetailView(title: "Zaman", description: "")
+        let timeView = DetailView(title: "accelerationTime".localized(), description: "")
         return timeView
     }()
     
     private let maxSpeedView: DetailView = {
-        let maxSpeedView = DetailView(title: "Max Hiz", description: "")
+        let maxSpeedView = DetailView(title: "accelerationMaxSpeed".localized(), description: "")
         return maxSpeedView
     }()
     
@@ -101,7 +101,7 @@ extension AccelerationViewController {
         self.tabBarController?.tabBar.tintColor = .textColor
         self.tabBarController?.tabBar.barTintColor = .firstColor
         navigationItem.rightBarButtonItem = buttonReset
-        title = "Hizlanma"
+        title = "accelerationTitle".localized()
     }
     
     private func layout() {
@@ -177,11 +177,17 @@ extension AccelerationViewController {
 extension AccelerationViewController: AccelerationViewProtocol {
     
     func updateDatas(time: Int, maxSpeed: Double, chardData: LineChartData, signalStatus: GPSSignalQualtyStatus, currentSpeed: Double) {
-        timeView.updateDescription(text: "\(time) sec")
+        timeView.updateDescription(text: "\(time) \("accelerationSeconds".localized())")
         maxSpeedView.updateDescription(text: "\(maxSpeed.format(f: ".3")) \(AppManager.shared.speedUnitType)")
         self.chart.data = chardData
         labelSpeed.text = "\(currentSpeed.format(f: ".3")) \(AppManager.shared.speedUnitType) "
-        labelSignalQuality.text = signalStatus.rawValue
+        labelSignalQuality.text = signalStatus.rawValue.localized()
+        switch signalStatus {
+        case .noSignal, .poorSignal:
+            labelSignalQuality.textColor = .red
+        case .avarageSignal, .fullSignal:
+            labelSignalQuality.textColor = .green
+        }
     }
     
     func weatherDatas(temperature: Double, moisture: Int) {

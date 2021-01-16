@@ -6,12 +6,49 @@
   
 */
 
-"test-Lang" = "eng";
-"tabbar.test" = "test eng";
+//Tabbar
+
+"gauge" = "Gauge";
+"acceleration" = "Acceleration";
+"gForce" = "G-Force";
+"settings" = "Settings";
 
 
 "alertTitle" = "Error";
 "alertOkButton" = "OK";
+"reset" = "Reset";
+
+//G Force
+
+"gForceTitle" = "G-Force";
+"gForceXAxis" = "X Axis";
+"gForceYAxis" = "Y Axis";
+"gForceZAxis" = "Z Axis";
+"gForceDescription" = "For more accurate results, hold your device upright in your vehicle.";
+"gForceMaxForce" = "Max G-Force";
+
+//Acceleration
+
+"accelerationTitle" = "Acceleration";
+"accelerationSignalQuality" = "Signal Quality";
+"accelerationSpeed" = "Speed";
+"accelerationWeatherStatus" = "Weather Status";
+"accelerationMoisture" = "Moisture";
+"accelerationTime" = "Time";
+"accelerationMaxSpeed" = "Max Speed";
+"accelerationSeconds" = "Sec";
+
+//Gauge
+
+"gaugeTitle" = "Acceleration";
+"gaugeSignalQuality" = "Signal Quality";
+"gaugeSpeed" = "Speed";
+"gaugeWeatherStatus" = "Weather Status";
+"gaugeMoisture" = "Moisture";
+"gaugeTime" = "Time";
+"gaugeMaxSpeed" = "Max Speed";
+"gaugeAverageSpeed" = "Average Speed";
+"gaugeSeconds" = "Sec";
 
 
 // SettingsViewController
@@ -21,7 +58,7 @@
 "settingsFirstTitle" = "General";
 "settingsPoint" = "Rate App";
 "settingsShare" = "Share App";
-"settingsShareDescription" = "Change Description";
+"settingsShareDescription" = "I found an application that you can use instead of a DBN device. You can download it from Link right away.";
 "settingsFeedback" = "Send Feedback";
 "settingsLanguage" = "Set Language";
 "settingsGps" = "Set GPS";
@@ -62,3 +99,7 @@
 "gpsErrorTitle" = "Warning";
 "gpsErrorDescription" = "We need your location information to calculate your speed.";
 "gpsErrorToSettings" = "Go To Settings";
+"gpsNoSignal" = "Sinyal Yok";
+"gpsErrorPoorSignal" = "Kötü Sinyal";
+"gpsErrorAverageSignal" = "Ortalama Sinyal";
+"gpsErrorFullSignal" = "Tam Sinyal";
