@@ -312,6 +312,11 @@ open class GaugeView: UIView {
         }
         progressLayer.strokeColor = ringColor.cgColor
     }
+    
+    public func updateSpeedType(text: String) {
+        unitOfMeasurementLabel.text = text
+        unitOfMeasurement = text
+    }
 }
 
 // MARK: - SUPPORT

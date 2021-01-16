@@ -173,4 +173,21 @@ extension GaugesPresenter: GaugesInteractorOutputProtocol {
             AlertService.messagePresent(title: "Error", message: error!.localizedDescription, moreButtonAction: nil)
         }
     }
+    
+    func locationPermissionVerified() {
+        interactor.getLocationDatas()
+    }
+    
+    func locationDatas(location: CLLocation, gpsSignal: GPSSignalQualtyStatus) {
+        self.getWeatherInformation(latitude: location.coordinate.latitude,
+                                   longitude: location.coordinate.longitude)
+        
+        self.signalStatus = gpsSignal
+        
+        if location.speed.nextUp >= 0 {
+            self.arraySpeedDatas.append(location.speed.nextUp*AppManager.shared.multiply)
+        } else {
+            self.arraySpeedDatas.append(0)
+        }
+    }
 }

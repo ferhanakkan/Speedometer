@@ -19,7 +19,6 @@ class AccelerationPresenter: NSObject {
     private var time: Double = 0
     private var arraySpeedDatas: [Double] = []
     
-    private let gpsService = GPSService()
     private var signalStatus: GPSSignalQualtyStatus = .noSignal
     private var isFirstTimeWeatherRequest = true
     
@@ -68,30 +67,6 @@ class AccelerationPresenter: NSObject {
             }
         }
     }
-    
-    private func verifyLocationpermission() {
-        gpsService.verifyOrAskForLocationPermission { (isValidate) in
-            if isValidate {
-                self.getLocationDatas()
-            }
-        }
-    }
-    
-    private func getLocationDatas() {
-        gpsService.locationDatas = { location, gpsSignalQualty in
-            
-            self.getWeatherInformation(latitude: location.coordinate.latitude,
-                                       longitude: location.coordinate.longitude)
-            
-            self.signalStatus = gpsSignalQualty
-            
-            if location.speed.nextUp >= 0 {
-                self.arraySpeedDatas.append(location.speed.nextUp*AppManager.shared.multiply)
-            } else {
-                self.arraySpeedDatas.append(0)
-            }
-        }
-    }
   
     private func getWeatherInformation(latitude: Double, longitude: Double) {
         if isFirstTimeWeatherRequest {
@@ -116,7 +91,7 @@ class AccelerationPresenter: NSObject {
 
 extension AccelerationPresenter: AccelerationPresenterProtocol {
     func viewWillAppear() {
-        verifyLocationpermission()
+        interactor.verifyLocationPermission()
     }
     
     func resetDatas() {
@@ -135,6 +110,23 @@ extension AccelerationPresenter: AccelerationInteractorOutputProtocol {
             view.weatherDatas(temperature: celsuisTemp, moisture: weather.main!.humidity!)
         } else {
             AlertService.messagePresent(title: "Error", message: error!.localizedDescription, moreButtonAction: nil)
+        }
+    }
+    
+    func locationPermissionVerified() {
+        interactor.getLocationDatas()
+    }
+    
+    func locationDatas(location: CLLocation, gpsSignal: GPSSignalQualtyStatus) {
+        self.getWeatherInformation(latitude: location.coordinate.latitude,
+                                   longitude: location.coordinate.longitude)
+        
+        self.signalStatus = gpsSignal
+        
+        if location.speed.nextUp >= 0 {
+            self.arraySpeedDatas.append(location.speed.nextUp*AppManager.shared.multiply)
+        } else {
+            self.arraySpeedDatas.append(0)
         }
     }
 }

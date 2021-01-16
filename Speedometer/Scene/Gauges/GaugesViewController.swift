@@ -117,6 +117,7 @@ final class GaugesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        gaugeView.updateSpeedType(text: AppManager.shared.speedUnitType)
         presenter.viewWillAppear()
     }
     

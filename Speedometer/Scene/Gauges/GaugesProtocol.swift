@@ -7,6 +7,7 @@
 
 import UIKit
 import Charts
+import CoreLocation
 
 //MARK: Router
 protocol GaugesRouterProtocol: class {
@@ -25,6 +26,8 @@ protocol GaugesPresenterProtocol: class {
 // Interactor -> Presenter
 protocol GaugesInteractorOutputProtocol: class {
     func weatherDetailsCompleted(weather: WeatherModel?, error: Error?)
+    func locationPermissionVerified()
+    func locationDatas(location: CLLocation, gpsSignal: GPSSignalQualtyStatus)
 }
 
 // Presenter -> Interactor
@@ -32,6 +35,8 @@ protocol GaugesInteractorOutputProtocol: class {
 protocol GaugesInteractorInputProtocol: class {
     var presenter: GaugesInteractorOutputProtocol! { get set }
     func getWeatherDetails(longitude: Double, latitude: Double)
+    func verifyLocationPermission()
+    func getLocationDatas()
 }
 
 //MARK: View
