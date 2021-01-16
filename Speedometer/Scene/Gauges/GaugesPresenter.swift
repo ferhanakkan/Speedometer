@@ -35,28 +35,6 @@ class GaugesPresenter: NSObject {
         sendDatas()
     }
     
-    private func verifyLocationpermission() {
-        gpsService.verifyOrAskForLocationPermission { (isValidate) in
-            if isValidate {
-                self.getLocationDatas()
-            }
-        }
-    }
-    
-    private func getLocationDatas() {
-        gpsService.locationDatas = { location, gpsSignalQualty in
-            self.getWeatherInformation(latitude: location.coordinate.latitude,
-                                       longitude: location.coordinate.longitude)
-            self.signalStatus = gpsSignalQualty
-            self.arrayLocationDatas.append(location)
-            if location.speed.nextUp >= 0 {
-                self.arraySpeedDatas.append(location.speed.nextUp*AppManager.shared.multiply)
-            } else {
-                self.arraySpeedDatas.append(0)
-            }
-        }
-    }
-    
     private func getWeatherInformation(latitude: Double, longitude: Double) {
         if isFirstTimeWeatherRequest {
             isFirstTimeWeatherRequest = false
@@ -148,7 +126,7 @@ class GaugesPresenter: NSObject {
 
 extension GaugesPresenter: GaugesPresenterProtocol {
     func viewWillAppear() {
-        verifyLocationpermission()
+        interactor.verifyLocationPermission()
     }
     
     func resetDatas() {
@@ -181,9 +159,8 @@ extension GaugesPresenter: GaugesInteractorOutputProtocol {
     func locationDatas(location: CLLocation, gpsSignal: GPSSignalQualtyStatus) {
         self.getWeatherInformation(latitude: location.coordinate.latitude,
                                    longitude: location.coordinate.longitude)
-        
         self.signalStatus = gpsSignal
-        
+        self.arrayLocationDatas.append(location)
         if location.speed.nextUp >= 0 {
             self.arraySpeedDatas.append(location.speed.nextUp*AppManager.shared.multiply)
         } else {

@@ -75,11 +75,11 @@ extension SettingsPresenter: SettingsPresenterProtocol {
         } else {
             switch row {
             case 0:
-                buyPremiumQuotes(productID: "com.ferhanakkan.Cargram.Coffee2")
+                buyPremiumQuotes(productID: "com.ferhanakkan.Speedometers.fiveDolar")
             case 1:
-                buyPremiumQuotes(productID: "com.ferhanakkan.Cargram.Coffee2")
+                buyPremiumQuotes(productID: "com.ferhanakkan.Speedometers.TenDolar")
             case 2:
-                buyPremiumQuotes(productID: "com.ferhanakkan.Cargram.Coffee2")
+                buyPremiumQuotes(productID: "com.ferhanakkan.Speedometers.Fifteen")
             default:
                 break
             }

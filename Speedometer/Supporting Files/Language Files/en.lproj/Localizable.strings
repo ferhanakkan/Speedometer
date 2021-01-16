@@ -99,7 +99,7 @@
 "gpsErrorTitle" = "Warning";
 "gpsErrorDescription" = "We need your location information to calculate your speed.";
 "gpsErrorToSettings" = "Go To Settings";
-"gpsNoSignal" = "Sinyal Yok";
-"gpsErrorPoorSignal" = "Kötü Sinyal";
-"gpsErrorAverageSignal" = "Ortalama Sinyal";
-"gpsErrorFullSignal" = "Tam Sinyal";
+"gpsNoSignal" = "No Signal";
+"gpsErrorPoorSignal" = "Poor Signal";
+"gpsErrorAverageSignal" = "Average Signal";
+"gpsErrorFullSignal" = "Full Signal";

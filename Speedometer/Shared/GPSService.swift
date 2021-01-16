@@ -73,7 +73,7 @@ class GPSService: NSObject {
         let action = UIAlertAction(title: "gpsErrorToSettings".localized(), style: .default) { _ in
             self.forwardToAppSettings()
         }
-        AlertService.messagePresent(title: "gpsErrorTitle".localized(), message: "gpsErrorButton".localized(), moreButtonAction: [action])
+        AlertService.messagePresent(title: "gpsErrorTitle".localized(), message: "gpsErrorDescription".localized(), moreButtonAction: [action])
     }
 
     private func checkSignalQualty(location: CLLocation) {

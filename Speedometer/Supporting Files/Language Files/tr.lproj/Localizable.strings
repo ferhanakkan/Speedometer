@@ -96,7 +96,7 @@
 //GPS Service
 
 "gpsErrorTitle" = "Uyarı";
-"gpsErrorButton" = "Hızınızı hesaplayabilmemiz için konum bilginize ihtiyaç duymaktayız.";
+"gpsErrorDescription" = "Hızınızı hesaplayabilmemiz için konum bilginize ihtiyaç duymaktayız.";
 "gpsErrorToSettings" = "Ayarlara Git";
 "gpsNoSignal" = "Sinyal Yok";
 "gpsErrorPoorSignal" = "Kötü Sinyal";
